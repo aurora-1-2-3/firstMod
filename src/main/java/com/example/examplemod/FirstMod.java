@@ -58,6 +58,11 @@ public class FirstMod {
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.GALLIUM_BLOCK);
+            event.accept(ModBlocks.RAW_GALLIUM_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.GALLIUM_ORE);
         }
 
     }

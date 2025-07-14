@@ -18,7 +18,26 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FirstMod.MODID);
 
-    public static final DeferredBlock<Block> GALLIUM_BLOCK = registerBlock("gallium_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final DeferredBlock<Block> GALLIUM_BLOCK = registerBlock("gallium_block",
+            () -> new Block(BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> RAW_GALLIUM_BLOCK = registerBlock("raw_gallium_block",
+            () -> new Block(BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> GALLIUM_ORE = registerBlock("gallium_ore",
+            () -> new DropExperienceBlock(UniformInt.of(500, 1000), BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST)));
 
 
 
