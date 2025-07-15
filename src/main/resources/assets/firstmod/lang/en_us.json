@@ -1,0 +1,20 @@
+{
+  "itemGroup.firstmod": "Example Mod Tab",
+  "block.firstmod.example_block": "Example Block",
+  "item.firstmod.example_item": "Example Item",
+
+  "firstmod.configuration.title": "Example Mod Configs",
+  "firstmod.configuration.section.firstmod.common.toml": "Example Mod Configs",
+  "firstmod.configuration.section.firstmod.common.toml.title": "Example Mod Configs",
+  "firstmod.configuration.items": "Item List",
+  "firstmod.configuration.logDirtBlock": "Log Dirt Block",
+  "firstmod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "firstmod.configuration.magicNumber": "Magic Number",
+  "item.firstmod.gallium_ingot" : "Gallium Ingot",
+  "item.firstmod.raw_gallium" : "Raw Gallium",
+  "block.firstmod.gallium_block" : "Block of Gallium",
+  "block.firstmod.raw_gallium_block" : "Block of Raw Gallium",
+  "block.firstmod.gallium_ore" : "Gallium Ore",
+  "block.firstmod.deepslate_gallium_ore" : "Deepslate Gallium Ore"
+
+}
