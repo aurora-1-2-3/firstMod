@@ -15,6 +15,9 @@
   "block.firstmod.gallium_block" : "Block of Gallium",
   "block.firstmod.raw_gallium_block" : "Block of Raw Gallium",
   "block.firstmod.gallium_ore" : "Gallium Ore",
-  "block.firstmod.deepslate_gallium_ore" : "Deepslate Gallium Ore"
+  "block.firstmod.deepslate_gallium_ore" : "Deepslate Gallium Ore",
+  "creativetab.firstmod.gallium_items" : "Gallium Tab",
+  "creativetab.firstmod.sigma_tab" : "The sigmas fear me :wolf:"
+
 
 }
