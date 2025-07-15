@@ -30,14 +30,21 @@ public class ModBlocks {
                     .Properties.of()
                     .strength(4f)
                     .requiresCorrectToolForDrops()
-                    .sound(SoundType.AMETHYST)));
+                    .sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> GALLIUM_ORE = registerBlock("gallium_ore",
-            () -> new DropExperienceBlock(UniformInt.of(500, 1000), BlockBehaviour
+            () -> new DropExperienceBlock(UniformInt.of(3, 5), BlockBehaviour
                     .Properties.of()
-                    .strength(4f)
+                    .strength(2f)
                     .requiresCorrectToolForDrops()
-                    .sound(SoundType.AMETHYST)));
+                    .sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> DEEPSLATE_GALLIUM_ORE = registerBlock("deepslate_gallium_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 5), BlockBehaviour
+                    .Properties.of()
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.DEEPSLATE)));
 
 
 
