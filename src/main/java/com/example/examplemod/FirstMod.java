@@ -54,20 +54,7 @@ public class FirstMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.GALLIUM_INGOT);
-            event.accept(ModItems.RAW_GALLIUM);
-        }
 
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.GALLIUM_BLOCK);
-            event.accept(ModBlocks.RAW_GALLIUM_BLOCK);
-        }
-
-        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(ModBlocks.GALLIUM_ORE);
-            event.accept(ModBlocks.DEEPSLATE_GALLIUM_ORE);
-        }
 
     }
 
