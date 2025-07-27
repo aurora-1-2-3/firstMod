@@ -1,0 +1,10 @@
+{
+	"replace": false,
+	"values" : [
+		"firstmod:gallium_block",
+		"firstmod:raw_gallium_block",
+		"firstmod:gallium_ore",
+		"firstmod:deepslate_gallium_ore"
+	]
+
+}

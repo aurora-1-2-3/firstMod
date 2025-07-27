@@ -23,6 +23,7 @@ public class ModCreativeModeTab {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.GALLIUM_INGOT);
                         output.accept(ModItems.RAW_GALLIUM);
+                        output.accept(ModItems.GALLIUM_ROD);
                         output.accept(ModBlocks.GALLIUM_BLOCK);
                         output.accept(ModBlocks.DEEPSLATE_GALLIUM_ORE);
                         output.accept(ModBlocks.GALLIUM_ORE);
