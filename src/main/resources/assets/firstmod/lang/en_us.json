@@ -12,12 +12,13 @@
   "firstmod.configuration.magicNumber": "Magic Number",
   "item.firstmod.gallium_ingot" : "Gallium Ingot",
   "item.firstmod.raw_gallium" : "Raw Gallium",
+  "item.firstmod.gallium_rod" : "Gallium Rod",
   "block.firstmod.gallium_block" : "Block of Gallium",
   "block.firstmod.raw_gallium_block" : "Block of Raw Gallium",
   "block.firstmod.gallium_ore" : "Gallium Ore",
   "block.firstmod.deepslate_gallium_ore" : "Deepslate Gallium Ore",
-  "creativetab.firstmod.gallium_items" : "Gallium Tab",
-  "creativetab.firstmod.sigma_tab" : "The sigmas fear me :wolf:"
+  "block.firstmod.gallium_rod_block" : "Block of Gallium Rod",
+  "creativetab.firstmod.gallium_items" : "Gallium Tab"
 
 
 }

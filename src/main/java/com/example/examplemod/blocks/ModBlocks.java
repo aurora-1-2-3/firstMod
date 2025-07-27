@@ -46,6 +46,13 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)));
 
+    public static final DeferredBlock<Block> GALLIUM_ROD_BLOCK = registerBlock("gallium_rod_block",
+            () -> new DropExperienceBlock(UniformInt.of(3, 5), BlockBehaviour
+                    .Properties.of()
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.WOOL)));
+
 
 
 

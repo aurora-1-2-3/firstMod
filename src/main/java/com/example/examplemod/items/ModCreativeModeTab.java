@@ -28,6 +28,7 @@ public class ModCreativeModeTab {
                         output.accept(ModBlocks.DEEPSLATE_GALLIUM_ORE);
                         output.accept(ModBlocks.GALLIUM_ORE);
                         output.accept(ModBlocks.RAW_GALLIUM_BLOCK);
+                        output.accept(ModBlocks.GALLIUM_ROD_BLOCK);
                     }).build());
 
 
