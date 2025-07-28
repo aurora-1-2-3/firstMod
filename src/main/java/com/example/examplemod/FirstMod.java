@@ -3,7 +3,6 @@ package com.example.examplemod;
 import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.items.ModCreativeModeTab;
 import com.example.examplemod.items.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
