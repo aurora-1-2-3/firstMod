@@ -1,6 +1,7 @@
 package com.example.examplemod.blocks;
 
 import com.example.examplemod.FirstMod;
+import com.example.examplemod.blocks.custom.GalvanizedSquareSteel;
 import com.example.examplemod.items.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -52,6 +53,13 @@ public class ModBlocks {
                     .strength(2f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.WOOL)));
+
+    public static final DeferredBlock<Block> GALVANIZED_SQUARE_STEEL = registerBlock("galvanized_square_steel",
+            () -> new GalvanizedSquareSteel( BlockBehaviour
+                    .Properties.of()
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.ANVIL)));
 
 
 

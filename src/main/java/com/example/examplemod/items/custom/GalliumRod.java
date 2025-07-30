@@ -17,16 +17,16 @@ import java.util.Map;
 public class GalliumRod extends Item {
     public static final Map<Block, Block> GALLIUM_ROD_LIST =
             Map.of(
-                    Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE,
-                    Blocks.COPPER_BLOCK, Blocks.COPPER_ORE,
-                    Blocks.COAL_BLOCK, Blocks.COAL_ORE,
-                    Blocks.NETHERITE_BLOCK, Blocks.ANCIENT_DEBRIS,
-                    Blocks.LAPIS_BLOCK, Blocks.LAPIS_ORE,
-                    Blocks.REDSTONE_BLOCK, Blocks.REDSTONE_ORE,
-                    Blocks.EMERALD_BLOCK, Blocks.EMERALD_ORE,
-                    Blocks.IRON_BLOCK, Blocks.IRON_ORE,
-                    Blocks.GOLD_BLOCK, Blocks.GOLD_ORE,
-                    ModBlocks.GALLIUM_BLOCK.get(), ModBlocks.GALLIUM_ORE.get()
+                    Blocks.DIAMOND_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
+                    Blocks.COPPER_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
+                    Blocks.COAL_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
+                    Blocks.NETHERITE_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
+                    Blocks.LAPIS_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
+                    Blocks.REDSTONE_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
+                    Blocks.EMERALD_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
+                    Blocks.IRON_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
+                    Blocks.GOLD_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
+                    ModBlocks.GALLIUM_BLOCK.get(), ModBlocks.GALVANIZED_SQUARE_STEEL.get()
 
 
 

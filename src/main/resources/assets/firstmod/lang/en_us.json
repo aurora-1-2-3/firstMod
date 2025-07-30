@@ -13,12 +13,20 @@
   "item.firstmod.gallium_ingot" : "Gallium Ingot",
   "item.firstmod.raw_gallium" : "Raw Gallium",
   "item.firstmod.gallium_rod" : "Gallium Rod",
+  "item.firstmod.gallium_ball" : "Gallium Ball",
   "block.firstmod.gallium_block" : "Block of Gallium",
+  "item.firstmod.gallium_bread" : "Gallium Bread",
+  "item.firstmod.gallium_clump" : "Gallium Clump",
+  "item.firstmod.cooked_axolotl_egg" : "Cooked Axolotl Egg",
   "block.firstmod.raw_gallium_block" : "Block of Raw Gallium",
   "block.firstmod.gallium_ore" : "Gallium Ore",
   "block.firstmod.deepslate_gallium_ore" : "Deepslate Gallium Ore",
   "block.firstmod.gallium_rod_block" : "Block of Gallium Rod",
-  "creativetab.firstmod.gallium_items" : "Gallium Tab"
+  "block.firstmod.galvanized_square_steel" : "Galvanized Square Steel",
+  "creativetab.firstmod.gallium_items" : "Gallium Tab",
+
+
+  "tooltips.firstmod.raw_gallium" : "sigma"
 
 
 }

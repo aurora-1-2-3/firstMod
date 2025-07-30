@@ -24,9 +24,14 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.GALLIUM_INGOT);
                         output.accept(ModItems.RAW_GALLIUM);
                         output.accept(ModItems.GALLIUM_ROD);
+                        output.accept(ModItems.COOKED_AXOLOTL_EGG);
+                        output.accept(ModItems.GALLIUM_CLUMP);
+                        output.accept(ModItems.GALLIUM_BREAD);
+                        output.accept(ModItems.GALLIUM_BALL);
                         output.accept(ModBlocks.GALLIUM_BLOCK);
                         output.accept(ModBlocks.DEEPSLATE_GALLIUM_ORE);
                         output.accept(ModBlocks.GALLIUM_ORE);
+                        output.accept(ModBlocks.GALVANIZED_SQUARE_STEEL);
                         output.accept(ModBlocks.RAW_GALLIUM_BLOCK);
                         output.accept(ModBlocks.GALLIUM_ROD_BLOCK);
                     }).build());
