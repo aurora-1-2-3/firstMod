@@ -27,9 +27,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModBlocks.DEEPSLATE_GALLIUM_ORE,
                 ModBlocks.GALLIUM_ORE);
 
+        List<ItemLike> AXOLOTL_COOKED = List.of
+                (Items.AXOLOTL_SPAWN_EGG
+                );
 
-
-
+        List<ItemLike> GALLIUM_ROD = List.of(ModBlocks.GALLIUM_ROD_BLOCK);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GALLIUM_BLOCK.get())
                 .pattern("GGG")
@@ -37,6 +39,40 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("GGG")
                 .define('G', ModItems.GALLIUM_INGOT.get())
                 .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_INGOT)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GALLIUM_BALL.get(), 8)
+                .pattern("GGG")
+                .pattern("GSG")
+                .pattern("GGG")
+                .define('G', ModItems.GALLIUM_INGOT.get())
+                .define( 'S', Items.SLIME_BALL)
+                .unlockedBy("has_gallium_ingot", has(ModItems.RAW_GALLIUM)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GALLIUM_BREAD.get(), 8)
+                .pattern("GGG")
+                .pattern("GBG")
+                .pattern("GGG")
+                .define('G', ModItems.GALLIUM_INGOT.get())
+                .define( 'B', Items.BREAD)
+                .unlockedBy("has_gallium_ingot", has(ModItems.RAW_GALLIUM)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GALLIUM_ROD_BLOCK.get())
+                .pattern("GGG")
+                .pattern("GGG")
+                .pattern("GGG")
+                .define('G', ModItems.GALLIUM_ROD.get())
+                .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_ROD)).save(recipeOutput);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GALLIUM_ROD.get())
+                .pattern("G")
+                .pattern("G")
+                .pattern("G")
+                .define('G', ModItems.GALLIUM_INGOT.get())
+                .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_INGOT)).save(recipeOutput);
+
+
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 9)
                 .requires(ModBlocks.GALLIUM_BLOCK)
@@ -53,6 +89,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(recipeOutput, GALLIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 0.5f, 200, "gallium");
         oreBlasting(recipeOutput, GALLIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 0.5f, 100, "gallium");
+        oreBlasting(recipeOutput, GALLIUM_ROD, RecipeCategory.MISC, ModItems.GALLIUM_ROD.get(), 0.5f, 100, "gallium");
+        foodSmoking(recipeOutput, AXOLOTL_COOKED, RecipeCategory.MISC, ModItems.COOKED_AXOLOTL_EGG.get(), 0.5f, 100, "gallium");
 
 
 
@@ -78,6 +116,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreCooking(recipeOutput, RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTime, pGroup, "_from_blasting");
     }
+
+    protected static void foodSmoking(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
+                                      float pExperience, int pCookingTime, String pGroup) {
+        oreCooking(recipeOutput, RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new, pIngredients, pCategory, pResult,
+                pExperience, pCookingTime, pGroup, "_from_smoking");
+    }
+
+
 
     protected static <T extends AbstractCookingRecipe> void oreCooking(RecipeOutput recipeOutput, RecipeSerializer<T> pCookingSerializer, AbstractCookingRecipe.Factory<T> factory,
                                                                        List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {

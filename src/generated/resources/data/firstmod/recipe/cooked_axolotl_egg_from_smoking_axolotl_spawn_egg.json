@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "group": "gallium",
+  "ingredient": {
+    "item": "minecraft:axolotl_spawn_egg"
+  },
+  "result": {
+    "count": 1,
+    "id": "firstmod:cooked_axolotl_egg"
+  }
+}

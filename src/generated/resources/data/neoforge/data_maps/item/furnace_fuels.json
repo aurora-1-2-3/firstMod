@@ -1,0 +1,10 @@
+{
+  "values": {
+    "firstmod:gallium_ball": {
+      "burn_time": 8000
+    },
+    "firstmod:gallium_clump": {
+      "burn_time": 800
+    }
+  }
+}
