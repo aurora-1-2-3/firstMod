@@ -33,5 +33,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GALLIUM_ORE.get())
                 .add(ModBlocks.DEEPSLATE_GALLIUM_ORE.get());
 
+
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.GALLIUM_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.GALLIUM_FENCE_GATE.get());
+
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.GALLIUM_WALL.get());
+
+
     }
 }

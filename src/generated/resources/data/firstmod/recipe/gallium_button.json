@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "gallium",
+  "ingredients": [
+    {
+      "item": "firstmod:gallium_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "firstmod:gallium_button"
+  }
+}

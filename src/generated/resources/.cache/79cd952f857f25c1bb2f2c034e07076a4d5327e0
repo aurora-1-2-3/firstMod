@@ -1,4 +1,7 @@
-// 1.21.1	2025-07-31T09:30:56.283996262	Tags for minecraft:block mod id firstmod
+// 1.21.1	2025-08-01T01:14:00.877441409	Tags for minecraft:block mod id firstmod
+f443b69cfa3795f642df1514d0e2551f88a76dcb data/minecraft/tags/block/fence_gates.json
+d3de52a32c34c50cf092007dab40b97fa268ad27 data/minecraft/tags/block/fences.json
 8059ff63d3f0f732c0c4ef65d87f317d77dd1529 data/minecraft/tags/block/mineable/pickaxe.json
 482372defe043b8ca70eff963f4e28a912142b95 data/minecraft/tags/block/needs_diamond_tool.json
 61393dd3ac97209a533635d6fb851562fa62f815 data/minecraft/tags/block/needs_iron_tool.json
+5624b5a1ac4c967b4b045700133698e706c45379 data/minecraft/tags/block/walls.json

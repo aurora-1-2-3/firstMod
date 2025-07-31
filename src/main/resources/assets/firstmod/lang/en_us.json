@@ -18,11 +18,24 @@
   "item.firstmod.gallium_bread" : "Gallium Bread",
   "item.firstmod.gallium_clump" : "Gallium Clump",
   "item.firstmod.cooked_axolotl_egg" : "Cooked Axolotl Egg",
+
+
   "block.firstmod.raw_gallium_block" : "Block of Raw Gallium",
   "block.firstmod.gallium_ore" : "Gallium Ore",
   "block.firstmod.deepslate_gallium_ore" : "Deepslate Gallium Ore",
   "block.firstmod.gallium_rod_block" : "Block of Gallium Rod",
   "block.firstmod.galvanized_square_steel" : "Galvanized Square Steel",
+  "block.firstmod.gallium_wall" : "Gallium Wall",
+  "block.firstmod.gallium_trap_door" : "Gallium Trapdoor",
+  "block.firstmod.gallium_door" : "Gallium Door",
+  "block.firstmod.gallium_fence_gate" : "Gallium Fence Gate",
+  "block.firstmod.gallium_fence" : "Gallium Fence",
+  "block.firstmod.gallium_button" : "Gallium Button",
+  "block.firstmod.gallium_pressure_plate" : "Gallium Pressure Plate",
+  "block.firstmod.gallium_slab" : "Gallium Slab",
+  "block.firstmod.gallium_stairs" : "Gallium Stairs",
+
+
   "creativetab.firstmod.gallium_items" : "Gallium Tab",
 
 

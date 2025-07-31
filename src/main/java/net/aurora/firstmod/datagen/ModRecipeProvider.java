@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
+
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -86,6 +87,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
 
 
+        stairBuilder(ModBlocks.GALLIUM_STAIRS.get(), Ingredient.of(ModItems.GALLIUM_INGOT)).group("gallium")
+                .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_INGOT)).save(recipeOutput);
+
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GALLIUM_SLAB.get(), ModItems.GALLIUM_INGOT.get());
+
+        buttonBuilder(ModBlocks.GALLIUM_BUTTON.get(), Ingredient.of(ModItems.GALLIUM_INGOT.get())).group("gallium")
+                .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_INGOT.get())).save(recipeOutput);
+
+        pressurePlate(recipeOutput, ModBlocks.GALLIUM_PRESSURE_PLATE.get(), ModItems.GALLIUM_INGOT.get());
+
+        fenceBuilder(ModBlocks.GALLIUM_FENCE.get(), Ingredient.of(ModItems.GALLIUM_INGOT.get())).group("gallium")
+                .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_INGOT.get())).save(recipeOutput);
+
+        fenceGateBuilder(ModBlocks.GALLIUM_FENCE_GATE.get(), Ingredient.of(ModItems.GALLIUM_INGOT.get())).group("gallium")
+                .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_INGOT.get())).save(recipeOutput);
+
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GALLIUM_WALL.get(), ModItems.GALLIUM_INGOT.get());
+
+        doorBuilder(ModBlocks.GALLIUM_DOOR.get(), Ingredient.of(ModItems.GALLIUM_INGOT.get())).group("gallium")
+                .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_INGOT.get())).save(recipeOutput);
+
+        trapdoorBuilder(ModBlocks.GALLIUM_TRAP_DOOR.get(), Ingredient.of(ModItems.GALLIUM_INGOT.get())).group("gallium")
+                .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_INGOT.get())).save(recipeOutput);
+
+
+
+
+
+
+
+
+
+
+
+        // COOKING
 
         oreSmelting(recipeOutput, GALLIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 0.5f, 200, "gallium");
         oreBlasting(recipeOutput, GALLIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 0.5f, 100, "gallium");

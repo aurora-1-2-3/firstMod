@@ -28,12 +28,23 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.GALLIUM_CLUMP);
                         output.accept(ModItems.GALLIUM_BREAD);
                         output.accept(ModItems.GALLIUM_BALL);
+
+
                         output.accept(ModBlocks.GALLIUM_BLOCK);
                         output.accept(ModBlocks.DEEPSLATE_GALLIUM_ORE);
                         output.accept(ModBlocks.GALLIUM_ORE);
                         output.accept(ModBlocks.GALVANIZED_SQUARE_STEEL);
                         output.accept(ModBlocks.RAW_GALLIUM_BLOCK);
                         output.accept(ModBlocks.GALLIUM_ROD_BLOCK);
+                        output.accept(ModBlocks.GALLIUM_TRAP_DOOR);
+                        output.accept(ModBlocks.GALLIUM_DOOR);
+                        output.accept(ModBlocks.GALLIUM_WALL);
+                        output.accept(ModBlocks.GALLIUM_FENCE_GATE);
+                        output.accept(ModBlocks.GALLIUM_FENCE);
+                        output.accept(ModBlocks.GALLIUM_BUTTON);
+                        output.accept(ModBlocks.GALLIUM_PRESSURE_PLATE);
+                        output.accept(ModBlocks.GALLIUM_SLAB);
+                        output.accept(ModBlocks.GALLIUM_STAIRS);
                     }).build());
 
 

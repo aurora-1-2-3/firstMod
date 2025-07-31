@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "gallium",
+  "key": {
+    "#": {
+      "item": "firstmod:gallium_ingot"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "firstmod:gallium_door"
+  }
+}

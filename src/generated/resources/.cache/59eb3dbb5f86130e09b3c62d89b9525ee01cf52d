@@ -1,7 +1,16 @@
-// 1.21.1	2025-07-31T09:03:50.162978985	Loot Tables
+// 1.21.1	2025-08-01T01:14:00.878851458	Loot Tables
 fbc990875cf3a735267c72c3b7ca7911b7f1ecfc data/firstmod/loot_table/blocks/deepslate_gallium_ore.json
 a3ab4dc3d0cfdc7ac2daa107eb9a08ba78f016af data/firstmod/loot_table/blocks/gallium_block.json
+408b4efa6bcc9ac12a6d837cdc0197fa62e69778 data/firstmod/loot_table/blocks/gallium_button.json
+5b5612edba5ea4824122db375e188c6d0c3d35b0 data/firstmod/loot_table/blocks/gallium_door.json
+64d57c9e25de410120425f3645a76aa14cc10d9b data/firstmod/loot_table/blocks/gallium_fence.json
+65e5f7d78a850ab1854828468a64f1a55e80f751 data/firstmod/loot_table/blocks/gallium_fence_gate.json
 d0816e86ec156f3bb06a6784ef107828464bc0ba data/firstmod/loot_table/blocks/gallium_ore.json
+bad0c0c23edecc3ddf4c4797b15276181b4fa20b data/firstmod/loot_table/blocks/gallium_pressure_plate.json
 348aed258ebdb77904ed10d177d9fe72d88411ef data/firstmod/loot_table/blocks/gallium_rod_block.json
+6ef25e812c3e219fcfea759ca30c2e393b6a9ab3 data/firstmod/loot_table/blocks/gallium_slab.json
+90311c1faa43ae0423a735ca9c58e62306e764d7 data/firstmod/loot_table/blocks/gallium_stairs.json
+09ff4233322047509a1b808baf0dd5ff97389086 data/firstmod/loot_table/blocks/gallium_trap_door.json
+5a5e9bf9be2a76712137ce3edcfc134adaf49d43 data/firstmod/loot_table/blocks/gallium_wall.json
 9e731e305ca4e9ec4fbb01446b5b5c79235ef326 data/firstmod/loot_table/blocks/galvanized_square_steel.json
 8f3858bf8acb359a96c8f753d637e13c44896726 data/firstmod/loot_table/blocks/raw_gallium_block.json

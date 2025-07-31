@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "firstmod:block/gallium_block",
+    "side": "firstmod:block/gallium_block",
+    "top": "firstmod:block/gallium_block"
+  }
+}

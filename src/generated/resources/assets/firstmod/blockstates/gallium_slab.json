@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "firstmod:block/gallium_slab"
+    },
+    "type=double": {
+      "model": "firstmod:block/gallium_block"
+    },
+    "type=top": {
+      "model": "firstmod:block/gallium_slab_top"
+    }
+  }
+}

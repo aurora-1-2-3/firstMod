@@ -16,6 +16,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.neoforged.fml.common.Mod;
 
 import java.util.Set;
 
@@ -30,7 +31,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.GALLIUM_ROD_BLOCK.get());
         dropSelf(ModBlocks.GALVANIZED_SQUARE_STEEL.get());
         dropSelf(ModBlocks.RAW_GALLIUM_BLOCK.get());
+        dropSelf(ModBlocks.GALLIUM_TRAP_DOOR.get());
+        dropSelf(ModBlocks.GALLIUM_WALL.get());
+        dropSelf(ModBlocks.GALLIUM_FENCE_GATE.get());
+        dropSelf(ModBlocks.GALLIUM_FENCE.get());
+        dropSelf(ModBlocks.GALLIUM_BUTTON.get());
+        dropSelf(ModBlocks.GALLIUM_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.GALLIUM_STAIRS.get());
 
+
+        add(ModBlocks.GALLIUM_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GALLIUM_SLAB.get()));
+
+        add(ModBlocks.GALLIUM_DOOR.get(),
+                block -> createDoorTable(ModBlocks.GALLIUM_DOOR.get()));
 
 
 

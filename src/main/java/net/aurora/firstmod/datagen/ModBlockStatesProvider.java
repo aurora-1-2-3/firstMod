@@ -3,7 +3,9 @@ package net.aurora.firstmod.datagen;
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.blocks.ModBlocks;
 import net.minecraft.data.PackOutput;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -21,6 +23,26 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_GALLIUM_ORE);
 
 
+        stairsBlock(ModBlocks.GALLIUM_STAIRS.get(), blockTexture(ModBlocks.GALLIUM_BLOCK.get()));
+        slabBlock(ModBlocks.GALLIUM_SLAB.get(), blockTexture(ModBlocks.GALLIUM_BLOCK.get()), blockTexture(ModBlocks.GALLIUM_BLOCK.get()));
+        buttonBlock(ModBlocks.GALLIUM_BUTTON.get(), blockTexture(ModBlocks.GALLIUM_BLOCK.get()));
+        pressurePlateBlock(ModBlocks.GALLIUM_PRESSURE_PLATE.get(), blockTexture(ModBlocks.GALLIUM_BLOCK.get()));
+        fenceBlock(ModBlocks.GALLIUM_FENCE.get(), blockTexture(ModBlocks.GALLIUM_BLOCK.get()));
+        fenceGateBlock(ModBlocks.GALLIUM_FENCE_GATE.get(), blockTexture(ModBlocks.GALLIUM_BLOCK.get()));
+        wallBlock(ModBlocks.GALLIUM_WALL.get(), blockTexture(ModBlocks.GALLIUM_BLOCK.get()));
+        doorBlockWithRenderType(ModBlocks.GALLIUM_DOOR.get(), modLoc("block/gallium_door_bottem"), modLoc("block/gallium_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.GALLIUM_TRAP_DOOR.get(), modLoc("block/gallium_trapdoor"), true,"cutout");
+
+
+        blockItem(ModBlocks.GALLIUM_STAIRS);
+        blockItem(ModBlocks.GALLIUM_SLAB);
+        blockItem(ModBlocks.GALLIUM_PRESSURE_PLATE);
+        blockItem(ModBlocks.GALLIUM_FENCE_GATE);
+        blockItem(ModBlocks.GALLIUM_TRAP_DOOR, "_bottom");
+
+
+
+
     }
 
 
@@ -29,5 +51,13 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 
+
+    private void blockItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("firstmod:block/" + deferredBlock.getId().getPath()));
+    }
+
+    private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("firstmod:block/" + deferredBlock.getId().getPath() + appendix));
+    }
 
 }

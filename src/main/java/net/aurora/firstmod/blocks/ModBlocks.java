@@ -6,10 +6,10 @@ import net.aurora.firstmod.items.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -60,6 +60,78 @@ public class ModBlocks {
                     .strength(2f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.ANVIL)));
+
+
+
+    public static final DeferredBlock<StairBlock> GALLIUM_STAIRS = registerBlock("gallium_stairs",
+            () -> new StairBlock(ModBlocks.GALLIUM_BLOCK.get().defaultBlockState(), BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<SlabBlock> GALLIUM_SLAB = registerBlock("gallium_slab",
+            () -> new SlabBlock(BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<PressurePlateBlock> GALLIUM_PRESSURE_PLATE = registerBlock("gallium_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<ButtonBlock> GALLIUM_BUTTON = registerBlock("gallium_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 30, BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .noCollission()));
+
+    public static final DeferredBlock<FenceBlock> GALLIUM_FENCE = registerBlock("gallium_fence",
+            () -> new FenceBlock(BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<FenceGateBlock> GALLIUM_FENCE_GATE = registerBlock("gallium_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<WallBlock> GALLIUM_WALL = registerBlock("gallium_wall",
+            () -> new WallBlock(BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<DoorBlock> GALLIUM_DOOR = registerBlock("gallium_door",
+            () -> new DoorBlock(BlockSetType.ACACIA, BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()));
+
+    public static final DeferredBlock<TrapDoorBlock> GALLIUM_TRAP_DOOR = registerBlock("gallium_trap_door",
+            () -> new TrapDoorBlock(BlockSetType.ACACIA, BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
