@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "gallium",
+  "ingredient": {
+    "item": "firstmod:raw_gallium"
+  },
+  "result": {
+    "count": 1,
+    "id": "firstmod:gallium_ingot"
+  }
+}
