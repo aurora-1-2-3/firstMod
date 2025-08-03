@@ -1,6 +1,7 @@
 package net.aurora.firstmod.items.custom;
 
 import net.aurora.firstmod.blocks.ModBlocks;
+import net.aurora.firstmod.components.ModDataComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -51,11 +52,20 @@ public class GalliumRod extends Item {
                         item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                 level.playSound(null, context.getClickedPos(), SoundEvents.ANVIL_USE, SoundSource.BLOCKS);
+
+
+
+                context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
+
             }
 
 
         }
 
         return InteractionResult.SUCCESS;
+
+
+
+
     }
 }

@@ -1,6 +1,7 @@
 package net.aurora.firstmod;
 
 import net.aurora.firstmod.blocks.ModBlocks;
+import net.aurora.firstmod.components.ModDataComponents;
 import net.aurora.firstmod.items.ModCreativeModeTab;
 import net.aurora.firstmod.items.ModItems;
 import org.slf4j.Logger;
@@ -35,6 +36,7 @@ public class FirstMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModDataComponents.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 

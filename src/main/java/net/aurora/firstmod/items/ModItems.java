@@ -1,6 +1,7 @@
 package net.aurora.firstmod.items;
 
 import net.aurora.firstmod.FirstMod;
+import net.aurora.firstmod.components.ModDataComponents;
 import net.aurora.firstmod.items.custom.FuelItem;
 import net.aurora.firstmod.items.custom.GalliumRod;
 import net.aurora.firstmod.items.custom.ModFoodProperties;
@@ -38,7 +39,18 @@ public class ModItems {
       public static final DeferredItem<Item> COOKED_AXOLOTL_EGG = ITEMS.register("cooked_axolotl_egg", () -> new Item(new Item.Properties().food(ModFoodProperties.COOKED_AXOLOTL_EGG)));
 
 
-      public static final DeferredItem<Item> GALLIUM_ROD = ITEMS.register("gallium_rod", () -> new GalliumRod(new Item.Properties().durability(32)));
+      public static final DeferredItem<Item> GALLIUM_ROD = ITEMS.register("gallium_rod", () -> new GalliumRod(new Item.Properties().durability(32)) {
+            @Override
+            public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                  if (stack.get(ModDataComponents.COORDINATES) != null){
+                        tooltipComponents.add(Component.literal("Last Block Galvanized: " + stack.get(ModDataComponents.COORDINATES)));
+                  }
+
+                  super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+            }
+
+
+      });
 
 
       public static void register(IEventBus eventBus){
