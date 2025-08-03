@@ -2,9 +2,12 @@ package net.aurora.firstmod.datagen;
 
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.blocks.ModBlocks;
+import net.aurora.firstmod.blocks.custom.GalliumRodBlock;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -17,7 +20,6 @@ public class ModBlockStatesProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.GALLIUM_BLOCK);
-        blockWithItem(ModBlocks.GALLIUM_ROD_BLOCK);
         blockWithItem(ModBlocks.GALLIUM_ORE);
         blockWithItem(ModBlocks.RAW_GALLIUM_BLOCK);
         blockWithItem(ModBlocks.DEEPSLATE_GALLIUM_ORE);
@@ -41,10 +43,23 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.GALLIUM_TRAP_DOOR, "_bottom");
 
 
-
+        galliumRodBlockColorChange();
 
     }
+    private void galliumRodBlockColorChange() {
+        getVariantBuilder(ModBlocks.GALLIUM_ROD_BLOCK.get()).forAllStates(state -> {
+            if(state.getValue(GalliumRodBlock.TOUCHED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("gallium_rod_block_blue",
+                        ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, "block/" + "gallium_rod_block_blue")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("gallium_rod_block_red",
+                        ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, "block/" + "gallium_rod_block_red")))};
+            }
+        });
 
+        simpleBlockItem(ModBlocks.GALLIUM_ROD_BLOCK.get(), models().cubeAll("gallium_rod_block_red",
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, "block/" + "gallium_rod_block_red")));
+    }
 
 
     private void blockWithItem(DeferredBlock<?> deferredBlock){

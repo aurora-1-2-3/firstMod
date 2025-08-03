@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-01T01:18:07.834902554	Block States: firstmod
+// 1.21.1	2025-08-03T15:38:11.288872597	Block States: firstmod
 7eaf2830ece64ff55cd9c94bbe391bd8bff2f65f assets/firstmod/blockstates/deepslate_gallium_ore.json
 dc7ffb580de8ee7d7dae2556527f84ff25651f6a assets/firstmod/blockstates/gallium_block.json
 152fd3406abed4562bf2417687725b3566361c3d assets/firstmod/blockstates/gallium_button.json
@@ -7,7 +7,7 @@ dc7ffb580de8ee7d7dae2556527f84ff25651f6a assets/firstmod/blockstates/gallium_blo
 6cc28b21f9fe581ac92427dbc9e7f64432b9e4ae assets/firstmod/blockstates/gallium_fence_gate.json
 28cf5304017f7abeca14088aec2869619a2f64e1 assets/firstmod/blockstates/gallium_ore.json
 faeb3d73472e9e438cba1e5891154c43d934103f assets/firstmod/blockstates/gallium_pressure_plate.json
-b37919f50ba538d1142558863e9184cf1bf2ba46 assets/firstmod/blockstates/gallium_rod_block.json
+69b46f755e87fbc6f2acd81949d96a0f7f06955f assets/firstmod/blockstates/gallium_rod_block.json
 63680c24f8b0a25dc275d58fbcbca218fa670eac assets/firstmod/blockstates/gallium_slab.json
 0289adf6918e844bfbe3614fa8fe768869b9e7fa assets/firstmod/blockstates/gallium_stairs.json
 04f1da3651b4ea9e93c03ad33b16b27b0550889e assets/firstmod/blockstates/gallium_trap_door.json
@@ -34,7 +34,8 @@ e631862ea0ee1b9abb43a44292939faad7042f73 assets/firstmod/models/block/gallium_fe
 eb94be66cdc6b947d017d8a0fe323861a4351a70 assets/firstmod/models/block/gallium_ore.json
 66d4886a6c48f68ea81667ce3c737b3cdedbb544 assets/firstmod/models/block/gallium_pressure_plate.json
 82e7d2b74b30ec38c6ff3e7661f2f3aca4efb174 assets/firstmod/models/block/gallium_pressure_plate_down.json
-3e0303c33776ae14087882b4a8ccd4171c3958bc assets/firstmod/models/block/gallium_rod_block.json
+cf99d32f98df7e85b7c6c75dcc8839086eab9e80 assets/firstmod/models/block/gallium_rod_block_blue.json
+44bbc9285df9dac020836eb6bd5e5be8993c0359 assets/firstmod/models/block/gallium_rod_block_red.json
 3cd5f66ea920641e157762e62e55bc5a887894bb assets/firstmod/models/block/gallium_slab.json
 edfce27d5862f90d7f0f9383d1d1fe6fec5b6f81 assets/firstmod/models/block/gallium_slab_top.json
 760824dca90fd27dd9432bc0f0cb024bcfe84bd1 assets/firstmod/models/block/gallium_stairs.json
@@ -52,7 +53,7 @@ f018db59dcad87b3cb02b808d6d1c6b9632bb678 assets/firstmod/models/block/raw_galliu
 57232729d8d1a052c903229fd2513fac6039389e assets/firstmod/models/item/gallium_fence_gate.json
 c24e924f9fbff0ddfde44515792c4450f15ca437 assets/firstmod/models/item/gallium_ore.json
 ddfc4c6ba4f479b4081852b0132e6d4973528732 assets/firstmod/models/item/gallium_pressure_plate.json
-ef957787fc7b0bc48effc22af0aed8d3aa32aff2 assets/firstmod/models/item/gallium_rod_block.json
+5d09db78c14ccf49ac5657b61059d3e1a1a23ec0 assets/firstmod/models/item/gallium_rod_block.json
 906d9b84c57106de4ee1bbd9bcfe90b00458bcb1 assets/firstmod/models/item/gallium_slab.json
 73ab070a75eb5cea78e172642446379ad9581091 assets/firstmod/models/item/gallium_stairs.json
 94cc7ce227a1a7ca03482c8da7aabd4d63d6240e assets/firstmod/models/item/gallium_trap_door.json

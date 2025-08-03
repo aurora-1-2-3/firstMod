@@ -1,6 +1,7 @@
 package net.aurora.firstmod.blocks;
 
 import net.aurora.firstmod.FirstMod;
+import net.aurora.firstmod.blocks.custom.GalliumRodBlock;
 import net.aurora.firstmod.blocks.custom.GalvanizedSquareSteel;
 import net.aurora.firstmod.items.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -48,7 +49,7 @@ public class ModBlocks {
                     .sound(SoundType.DEEPSLATE)));
 
     public static final DeferredBlock<Block> GALLIUM_ROD_BLOCK = registerBlock("gallium_rod_block",
-            () -> new DropExperienceBlock(UniformInt.of(3, 5), BlockBehaviour
+            () -> new GalliumRodBlock( BlockBehaviour
                     .Properties.of()
                     .strength(2f)
                     .requiresCorrectToolForDrops()

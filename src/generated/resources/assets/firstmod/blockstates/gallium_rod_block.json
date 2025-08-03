@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "firstmod:block/gallium_rod_block"
+    "touched=false": {
+      "model": "firstmod:block/gallium_rod_block_red"
+    },
+    "touched=true": {
+      "model": "firstmod:block/gallium_rod_block_blue"
     }
   }
 }

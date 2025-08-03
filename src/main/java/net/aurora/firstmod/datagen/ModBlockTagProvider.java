@@ -37,6 +37,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES)
                 .add(ModBlocks.GALLIUM_FENCE.get());
 
+        tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.GALLIUM_FENCE.get());
+
         tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.GALLIUM_FENCE_GATE.get());
 
