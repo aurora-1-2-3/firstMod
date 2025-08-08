@@ -19,6 +19,11 @@
   "item.firstmod.gallium_clump" : "Gallium Clump",
   "item.firstmod.cooked_axolotl_egg" : "Cooked Axolotl Egg",
   "item.firstmod.gallium_nugget" : "Gallium Nugget",
+  "item.firstmod.gallium_axe" : "Gallium Axe",
+  "item.firstmod.gallium_hoe" : "Gallium Hoe",
+  "item.firstmod.gallium_pickaxe" : "Gallium Pickaxe",
+  "item.firstmod.gallium_sword" : "Gallium Sword",
+  "item.firstmod.gallium_shovel" : "Gallium Shovel",
 
 
   "block.firstmod.raw_gallium_block" : "Block of Raw Gallium",

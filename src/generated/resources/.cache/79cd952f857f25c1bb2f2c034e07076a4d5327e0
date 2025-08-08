@@ -1,4 +1,6 @@
-// 1.21.1	2025-08-03T15:38:11.287036235	Tags for minecraft:block mod id firstmod
+// 1.21.1	2025-08-08T17:40:46.611056177	Tags for minecraft:block mod id firstmod
+be8d12d45ea3aa1c30122b6f64e491fad424eb04 data/firstmod/tags/block/incorrect_for_gallium_tool.json
+a249c46329a41538f49a564e1f14338aaf1be5a0 data/firstmod/tags/block/needs_gallium_tool.json
 f443b69cfa3795f642df1514d0e2551f88a76dcb data/minecraft/tags/block/fence_gates.json
 d3de52a32c34c50cf092007dab40b97fa268ad27 data/minecraft/tags/block/fences.json
 8059ff63d3f0f732c0c4ef65d87f317d77dd1529 data/minecraft/tags/block/mineable/pickaxe.json

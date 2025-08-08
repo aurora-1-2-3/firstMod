@@ -2,6 +2,7 @@ package net.aurora.firstmod.datagen;
 
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.blocks.ModBlocks;
+import net.aurora.firstmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -34,6 +35,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DEEPSLATE_GALLIUM_ORE.get());
 
 
+        tag(ModTags.Blocks.NEEDS_GALLIUM_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_GALLIUM_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_GALLIUM_TOOL);
+
+
         tag(BlockTags.FENCES)
                 .add(ModBlocks.GALLIUM_FENCE.get());
 
@@ -45,6 +54,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.WALLS)
                 .add(ModBlocks.GALLIUM_WALL.get());
+
+
+
+
 
 
     }

@@ -6,9 +6,11 @@ import net.aurora.firstmod.items.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemProvider extends ItemModelProvider {
     public ModItemProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -33,6 +35,14 @@ public class ModItemProvider extends ItemModelProvider {
 
         basicItem(ModBlocks.GALLIUM_DOOR.asItem());
 
+        handheldItem(ModItems.GALLIUM_AXE);
+        handheldItem(ModItems.GALLIUM_PICKAXE);
+        handheldItem(ModItems.GALLIUM_HOE);
+        handheldItem(ModItems.GALLIUM_SHOVEL);
+        handheldItem(ModItems.GALLIUM_SWORD);
+
+
+
 
 
     }
@@ -55,7 +65,11 @@ public class ModItemProvider extends ItemModelProvider {
                         "block/" + baseBlock.getId().getPath()));
     }
 
-
+    private ItemModelBuilder handheldItem(DeferredItem<?> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MODID,"item/" + item.getId().getPath()));
+    }
 
 
 

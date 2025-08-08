@@ -1,12 +1,17 @@
-// 1.21.1	2025-08-01T01:14:00.885086175	Item Models: firstmod
+// 1.21.1	2025-08-08T17:40:46.612724503	Item Models: firstmod
 7293cd3d65e3de24fca13b8d4a832b51e6c9f523 assets/firstmod/models/item/cooked_axolotl_egg.json
+e0750a75ec61a52d7e72417339906f61db3b417f assets/firstmod/models/item/gallium_axe.json
 f8b29885b188726a385b2fd1e7187f7ada5c0373 assets/firstmod/models/item/gallium_ball.json
 16381c3a8fecfcff1960917b29a2a2f42f2e26c8 assets/firstmod/models/item/gallium_bread.json
 eb96241be34a0e51361604440f14306f2c149bc5 assets/firstmod/models/item/gallium_button.json
 e136b0dc120a578aeec2f573f6760645b359bc42 assets/firstmod/models/item/gallium_clump.json
 66d756c6aace238c7748c1b29800f955c6b2a180 assets/firstmod/models/item/gallium_door.json
 2126fdc453a16376b5493b07127029d9beecb7a5 assets/firstmod/models/item/gallium_fence.json
+72e6d0b0bbcbce66346167dd39e6f0076649c0f5 assets/firstmod/models/item/gallium_hoe.json
 c3d3ff8fafc2d870c9d1fc550785b8317e2b4bdc assets/firstmod/models/item/gallium_ingot.json
+709d7eb9a578eed07e99cea0dc0788b3dff398f2 assets/firstmod/models/item/gallium_pickaxe.json
 e7cb08d531cbe63fb14b1a5446c06879db2e0c5a assets/firstmod/models/item/gallium_rod.json
+4ee9bf22d6cf8c71218d46cdf50a13c1248ad4ec assets/firstmod/models/item/gallium_shovel.json
+8e4cf919fa1f697ed270a58701009a1a183f13bf assets/firstmod/models/item/gallium_sword.json
 227426a86480350e8020ddbf021eb7657139766b assets/firstmod/models/item/gallium_wall.json
 f557bcd0284a1d1ac00b7b095b64d4bd2a06ffc8 assets/firstmod/models/item/raw_gallium.json

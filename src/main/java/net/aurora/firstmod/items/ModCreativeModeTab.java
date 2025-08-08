@@ -29,6 +29,11 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.GALLIUM_BREAD);
                         output.accept(ModItems.GALLIUM_BALL);
                         output.accept(ModItems.GALLIUM_NUGGET);
+                        output.accept(ModItems.GALLIUM_AXE);
+                        output.accept(ModItems.GALLIUM_PICKAXE);
+                        output.accept(ModItems.GALLIUM_SWORD);
+                        output.accept(ModItems.GALLIUM_SHOVEL);
+                        output.accept(ModItems.GALLIUM_HOE);
 
 
                         output.accept(ModBlocks.GALLIUM_BLOCK);

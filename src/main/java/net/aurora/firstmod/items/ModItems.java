@@ -5,10 +5,9 @@ import net.aurora.firstmod.components.ModDataComponents;
 import net.aurora.firstmod.items.custom.FuelItem;
 import net.aurora.firstmod.items.custom.GalliumRod;
 import net.aurora.firstmod.items.custom.ModFoodProperties;
+import net.aurora.firstmod.items.custom.ModToolTiers;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -52,6 +51,28 @@ public class ModItems {
 
 
       });
+
+
+
+      public static final DeferredItem<SwordItem> GALLIUM_SWORD = ITEMS.register("gallium_sword",
+              () -> new SwordItem(ModToolTiers.GALLIUM, new Item.Properties()
+                      .attributes(SwordItem.createAttributes(ModToolTiers.GALLIUM, 5, -2.4f))));
+
+      public static final DeferredItem<PickaxeItem> GALLIUM_PICKAXE = ITEMS.register("gallium_pickaxe",
+              () -> new PickaxeItem(ModToolTiers.GALLIUM, new Item.Properties()
+                      .attributes(PickaxeItem.createAttributes(ModToolTiers.GALLIUM, 1.0F, -2.8f))));
+
+      public static final DeferredItem<ShovelItem> GALLIUM_SHOVEL = ITEMS.register("gallium_shovel",
+              () -> new ShovelItem(ModToolTiers.GALLIUM, new Item.Properties()
+                      .attributes(ShovelItem.createAttributes(ModToolTiers.GALLIUM, 1.5F, -3.0f))));
+
+      public static final DeferredItem<AxeItem> GALLIUM_AXE = ITEMS.register("gallium_axe",
+              () -> new AxeItem(ModToolTiers.GALLIUM, new Item.Properties()
+                      .attributes(AxeItem.createAttributes(ModToolTiers.GALLIUM, 1.0f, -2.0f))));
+
+      public static final DeferredItem<HoeItem> GALLIUM_HOE = ITEMS.register("gallium_hoe",
+              () -> new HoeItem(ModToolTiers.GALLIUM, new Item.Properties()
+                      .attributes(HoeItem.createAttributes(ModToolTiers.GALLIUM, 1.0f, -2.0f))));
 
 
       public static void register(IEventBus eventBus){
