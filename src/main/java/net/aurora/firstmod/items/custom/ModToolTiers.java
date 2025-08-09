@@ -8,6 +8,6 @@ import net.neoforged.neoforge.common.SimpleTier;
 
 public class ModToolTiers {
     public static final Tier GALLIUM = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_GALLIUM_TOOL,
-            1400, 8f, 5f, 50, () -> Ingredient.of(ModItems.GALLIUM_INGOT));
+            1400, 100f, 5f, 50, () -> Ingredient.of(ModItems.GALLIUM_INGOT));
 
 }
