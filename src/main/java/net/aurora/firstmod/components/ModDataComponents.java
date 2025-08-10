@@ -15,7 +15,7 @@ public class ModDataComponents {
     public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENTS =
             DeferredRegister.createDataComponents(FirstMod.MODID);
 
-
+    
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<BlockPos>> COORDINATES = register("coordinates",
             builder -> builder.persistent(BlockPos.CODEC));
 
