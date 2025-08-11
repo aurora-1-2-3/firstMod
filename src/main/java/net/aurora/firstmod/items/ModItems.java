@@ -2,10 +2,7 @@ package net.aurora.firstmod.items;
 
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.components.ModDataComponents;
-import net.aurora.firstmod.items.custom.FuelItem;
-import net.aurora.firstmod.items.custom.GalliumRod;
-import net.aurora.firstmod.items.custom.ModFoodProperties;
-import net.aurora.firstmod.items.custom.ModToolTiers;
+import net.aurora.firstmod.items.custom.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
@@ -54,9 +51,13 @@ public class ModItems {
 
 
 
-      public static final DeferredItem<SwordItem> GALLIUM_SWORD = ITEMS.register("gallium_sword",
-              () -> new SwordItem(ModToolTiers.GALLIUM, new Item.Properties()
-                      .attributes(SwordItem.createAttributes(ModToolTiers.GALLIUM, 5, -2.4f))));
+      public static final DeferredItem<ModSwordItem> GALLIUM_SWORD = ITEMS.register("gallium_sword",
+              () -> new ModSwordItem(ModToolTiers.GALLIUM, new Item.Properties()
+                      .attributes(ModSwordItem.createAttributes(ModToolTiers.GALLIUM, 5, -2.4f))));
+
+
+
+
 
       public static final DeferredItem<PickaxeItem> GALLIUM_PICKAXE = ITEMS.register("gallium_pickaxe",
               () -> new PickaxeItem(ModToolTiers.GALLIUM, new Item.Properties()
