@@ -38,6 +38,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.GALLIUM_BUTTON.get());
         dropSelf(ModBlocks.GALLIUM_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.GALLIUM_STAIRS.get());
+        dropSelf(ModBlocks.RAW_BOIIUM_BLOCK.get());
 
 
         add(ModBlocks.GALLIUM_SLAB.get(),

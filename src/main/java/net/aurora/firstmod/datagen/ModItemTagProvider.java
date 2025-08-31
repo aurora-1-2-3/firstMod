@@ -6,7 +6,6 @@ import net.aurora.firstmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -28,6 +27,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.GALLIUM_INGOT.get())
                 .add(ModItems.RAW_GALLIUM.get())
                 .add(ModItems.GALLIUM_BREAD.get());
+
+        tag(ModTags.Items.BOIIUM_ITEMS)
+                .add(ModItems.BOIIUM_ROD.get())
+                .add(ModItems.RAW_BOIIUM.get());
 
 
         tag(ItemTags.SHOVELS).add(ModItems.GALLIUM_SHOVEL.get());

@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-01T01:14:00.879506727	Recipes
+// 1.21.1	2025-08-31T10:27:49.840782176	Recipes
 8c6979dbd2ab7e47580ad1c57d09bc2de4068b70 data/firstmod/advancement/recipes/building_blocks/gallium_slab.json
 f1c2b4e31ea55e102e72d49dd1d066ee24bef1ad data/firstmod/advancement/recipes/building_blocks/gallium_stairs.json
 b40382a027f9d394cc947ffe50918a656a522ad0 data/firstmod/advancement/recipes/building_blocks/gallium_wall.json
@@ -17,6 +17,7 @@ e9462be208752f111b8f95d26fc2af8060dbc217 data/firstmod/advancement/recipes/misc/
 640b3aed184720347bf72bdea02ee746966c2947 data/firstmod/advancement/recipes/misc/gallium_rod.json
 a1872ff707c68d96c5fa25b22d8c08d1a4e2c7d6 data/firstmod/advancement/recipes/misc/gallium_rod_block.json
 34af6688242065cf10c87da5bb19773b5b5dd278 data/firstmod/advancement/recipes/misc/gallium_rod_from_blasting_gallium_rod_block.json
+e2f87f8d0a3938bc5ce43f77df33f74d34331603 data/firstmod/advancement/recipes/misc/raw_boiium_block.json
 805b7e0c70eb3ffcfdccdf2573efb9d0a80ae9d6 data/firstmod/advancement/recipes/redstone/gallium_button.json
 288f1d84ccf63387110014ec5ad068d780c829cd data/firstmod/advancement/recipes/redstone/gallium_door.json
 4839cad850174b2aa1ffaba070c9fea037e69e13 data/firstmod/advancement/recipes/redstone/gallium_fence_gate.json
@@ -45,5 +46,6 @@ a0621c029d48aa156932f9161c6f744d7803134f data/firstmod/recipe/gallium_rod_from_b
 6e5bb9029af3fe2ffa4cfdac5c0dad7f73e875a5 data/firstmod/recipe/gallium_stairs.json
 25233ad520c5aa8e79216916d674d2aa68343f3f data/firstmod/recipe/gallium_trap_door.json
 323e52e3138da0eb996c1c25cf2006adc121fb45 data/firstmod/recipe/gallium_wall.json
+9de43234928e357139a9225e11b6e4bda3e2baf5 data/firstmod/recipe/raw_boiium_block.json
 1b575650e1d725e9841826a3c3fcc8ac2f8d1548 data/minecraft/advancement/recipes/misc/netherite_block.json
 d77b6e1e52ffc3d67d605b9d570dc42b788599e9 data/minecraft/recipe/netherite_block.json

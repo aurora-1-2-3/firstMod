@@ -64,6 +64,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('G', ModItems.GALLIUM_ROD.get())
                 .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_ROD)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_BOIIUM_BLOCK.get())
+                .pattern("GGG")
+                .pattern("GGG")
+                .pattern("GGG")
+                .define('G', ModItems.RAW_BOIIUM.get())
+                .unlockedBy("has_raw_boiium", has(ModItems.RAW_BOIIUM)).save(recipeOutput);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GALLIUM_ROD.get())
                 .pattern("G")

@@ -3,9 +3,18 @@ package net.aurora.firstmod.datagen;
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.blocks.ModBlocks;
 import net.aurora.firstmod.blocks.custom.GalliumRodBlock;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.data.models.blockstates.PropertyDispatch;
+import net.minecraft.data.models.blockstates.Variant;
+import net.minecraft.data.models.blockstates.VariantProperties;
+import net.minecraft.data.models.model.ModelLocationUtils;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.fml.common.Mod;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -23,6 +32,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.GALLIUM_ORE);
         blockWithItem(ModBlocks.RAW_GALLIUM_BLOCK);
         blockWithItem(ModBlocks.DEEPSLATE_GALLIUM_ORE);
+        blockWithItem(ModBlocks.RAW_BOIIUM_BLOCK);
 
 
         stairsBlock(ModBlocks.GALLIUM_STAIRS.get(), blockTexture(ModBlocks.GALLIUM_BLOCK.get()));
@@ -46,6 +56,8 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         galliumRodBlockColorChange();
 
     }
+
+
     private void galliumRodBlockColorChange() {
         getVariantBuilder(ModBlocks.GALLIUM_ROD_BLOCK.get()).forAllStates(state -> {
             if(state.getValue(GalliumRodBlock.TOUCHED)) {

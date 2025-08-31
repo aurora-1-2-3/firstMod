@@ -1,21 +1,75 @@
 package net.aurora.firstmod.items;
 
 import net.aurora.firstmod.FirstMod;
+import net.aurora.firstmod.blocks.ModBlocks;
 import net.aurora.firstmod.components.ModDataComponents;
 import net.aurora.firstmod.items.custom.*;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.List;
+import java.util.Map;
 
 public class ModItems {
       public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FirstMod.MODID);
 
 
       public static final DeferredItem<Item> GALLIUM_INGOT = ITEMS.register("gallium_ingot", () -> new Item(new Item.Properties()));
+      public static final DeferredItem<Item> RAW_BOIIUM = ITEMS.register("raw_boiium", () -> new Item(new Item.Properties()));
+      public static final DeferredItem<Item> BOIIUM_ROD = ITEMS.register("boiium_rod", () -> new Item(new Item.Properties().durability(32)){
+          public static final Map<Block, Block> BOIIUM_ROD_LIST =
+                  Map.of(
+                          Blocks.DIAMOND_BLOCK, Blocks.AIR,
+                          Blocks.COPPER_BLOCK, Blocks.AIR,
+                          Blocks.COAL_BLOCK, Blocks.AIR,
+                          Blocks.NETHERITE_BLOCK, Blocks.AIR,
+                          Blocks.LAPIS_BLOCK, Blocks.AIR,
+                          Blocks.REDSTONE_BLOCK, Blocks.AIR,
+                          Blocks.EMERALD_BLOCK, Blocks.AIR,
+                          Blocks.IRON_BLOCK, Blocks.AIR,
+                          Blocks.GOLD_BLOCK, Blocks.AIR,
+                          ModBlocks.GALLIUM_BLOCK.get(), Blocks.AIR
+
+
+
+                  );
+
+          @Override
+          public InteractionResult useOn(UseOnContext context) {
+              Level level = context.getLevel();
+              Block clickedBlock = level.getBlockState(context.getClickedPos()).getBlock();
+
+              if(BOIIUM_ROD_LIST.containsKey(clickedBlock)) {
+                  if(!level.isClientSide()) {
+                      level.setBlockAndUpdate(context.getClickedPos(), BOIIUM_ROD_LIST.get(clickedBlock).defaultBlockState());
+
+
+                      context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level),  context.getPlayer(),
+                              item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
+
+                      level.playSound(null, context.getClickedPos(), SoundEvents.ANVIL_USE, SoundSource.BLOCKS);
+
+
+
+                      context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
+
+                  }
+              }
+              return InteractionResult.SUCCESS;
+          }
+      });
       public static final DeferredItem<Item> GALLIUM_NUGGET = ITEMS.register("gallium_nugget", () -> new Item(new Item.Properties()));
       public static final DeferredItem<Item> RAW_GALLIUM = ITEMS.register("raw_gallium", () -> new Item(new Item.Properties()) {
             @Override
@@ -25,17 +79,10 @@ public class ModItems {
                   super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
             }
       });
-
-
-      public static final DeferredItem<Item> GALLIUM_BALL = ITEMS.register("gallium_ball", () -> new FuelItem(new Item.Properties(), 80000));
-      public static final DeferredItem<Item> GALLIUM_CLUMP = ITEMS.register("gallium_clump", () -> new FuelItem(new Item.Properties(), 100));
-
-
-
+      public static final DeferredItem<Item> GALLIUM_BALL = ITEMS.register("gallium_ball", () -> new Item(new Item.Properties()));
+      public static final DeferredItem<Item> GALLIUM_CLUMP = ITEMS.register("gallium_clump", () -> new Item(new Item.Properties()));
       public static final DeferredItem<Item> GALLIUM_BREAD = ITEMS.register("gallium_bread", () -> new Item(new Item.Properties().food(ModFoodProperties.GALLIUM_BREAD)));
       public static final DeferredItem<Item> COOKED_AXOLOTL_EGG = ITEMS.register("cooked_axolotl_egg", () -> new Item(new Item.Properties().food(ModFoodProperties.COOKED_AXOLOTL_EGG)));
-
-
       public static final DeferredItem<Item> GALLIUM_ROD = ITEMS.register("gallium_rod", () -> new GalliumRod(new Item.Properties().durability(32)) {
             @Override
             public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
@@ -51,13 +98,10 @@ public class ModItems {
 
 
 
+
       public static final DeferredItem<ModSwordItem> GALLIUM_SWORD = ITEMS.register("gallium_sword",
               () -> new ModSwordItem(ModToolTiers.GALLIUM, new Item.Properties()
                       .attributes(ModSwordItem.createAttributes(ModToolTiers.GALLIUM, 5, -2.4f))));
-
-
-
-
 
       public static final DeferredItem<PickaxeItem> GALLIUM_PICKAXE = ITEMS.register("gallium_pickaxe",
               () -> new PickaxeItem(ModToolTiers.GALLIUM, new Item.Properties()

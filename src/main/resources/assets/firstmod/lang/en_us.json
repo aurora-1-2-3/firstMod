@@ -24,6 +24,8 @@
   "item.firstmod.gallium_pickaxe" : "Gallium Pickaxe",
   "item.firstmod.gallium_sword" : "Gallium Sword",
   "item.firstmod.gallium_shovel" : "Gallium Shovel",
+  "item.firstmod.raw_boiium": "Raw Boiium",
+  "item.firstmod.boiium_rod": "Boiium Rod",
 
 
   "block.firstmod.raw_gallium_block" : "Block of Raw Gallium",
@@ -40,9 +42,11 @@
   "block.firstmod.gallium_pressure_plate" : "Gallium Pressure Plate",
   "block.firstmod.gallium_slab" : "Gallium Slab",
   "block.firstmod.gallium_stairs" : "Gallium Stairs",
+  "block.firstmod.raw_boiium_block" : "Raw Boiium Block",
 
 
   "creativetab.firstmod.gallium_items" : "Gallium Tab",
+  "creativetab.firstmod.boiium_items" : "Boiium Tab",
 
 
   "tooltips.firstmod.raw_gallium" : "sigma"

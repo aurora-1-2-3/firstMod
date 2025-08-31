@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "firstmod:raw_boiium"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GGG",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "firstmod:raw_boiium_block"
+  }
+}

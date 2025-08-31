@@ -24,6 +24,12 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
+        public static final TagKey<Item> BOIIUM_ITEMS = createTag("boiium_items");
+
+
+
+
+
 
         private static TagKey<Item> createTag(String name){
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, name));

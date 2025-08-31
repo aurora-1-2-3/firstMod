@@ -34,6 +34,14 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
+    public static final DeferredBlock<Block> RAW_BOIIUM_BLOCK = registerBlock("raw_boiium_block",
+            () -> new Block(BlockBehaviour
+                    .Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
+
     public static final DeferredBlock<Block> GALLIUM_ORE = registerBlock("gallium_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 5), BlockBehaviour
                     .Properties.of()

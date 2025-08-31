@@ -54,7 +54,17 @@ public class ModCreativeModeTab {
                     }).build());
 
 
+    public static final Supplier<CreativeModeTab> BOIIUM_TAB = CREATIVE_MODE_TAB.register("boiium_tab", () -> CreativeModeTab.builder()
+            .icon(() -> new ItemStack(ModItems.RAW_BOIIUM.get()))
+            .title(Component.translatable("creativetab.firstmod.boiium"))
+            .displayItems((itemDisplayParameters, output) -> {
+                output.accept(ModItems.RAW_BOIIUM);
+                output.accept(ModBlocks.RAW_BOIIUM_BLOCK);
+                output.accept(ModItems.BOIIUM_ROD);
+            })
 
+
+            .build());
 
 
   public static void register(IEventBus eventBus) {

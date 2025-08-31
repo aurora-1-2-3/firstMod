@@ -27,6 +27,8 @@ public class ModItemProvider extends ItemModelProvider {
         basicItem(ModItems.COOKED_AXOLOTL_EGG.get());
         basicItem(ModItems.GALLIUM_INGOT.get());
         basicItem(ModItems.GALLIUM_NUGGET.get());
+        basicItem(ModItems.RAW_BOIIUM.get());
+        basicItem(ModItems.BOIIUM_ROD.get());
 
 
         buttonItem(ModBlocks.GALLIUM_BUTTON, ModBlocks.GALLIUM_BLOCK);
