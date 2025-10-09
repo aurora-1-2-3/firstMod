@@ -1,4 +1,5 @@
-// 1.21.1	2025-08-08T17:40:46.613341928	Tags for minecraft:item mod id firstmod
+// 1.21.1	2025-10-04T06:30:00.735936617	Tags for minecraft:item mod id firstmod
+e9f3d66fb2c0c813493f63ce2cc1066f65808a48 data/firstmod/tags/item/boiium_items.json
 023556b12a84ac7ca0a60fa6d692f96c25d934c3 data/firstmod/tags/item/transformable_items.json
 3e42b4bcd7a59d85428a4ae4818dc6c9258fdf4c data/minecraft/tags/item/axes.json
 8ab19a257358e7bb480bb2cbe0352ac3983261bc data/minecraft/tags/item/hoes.json

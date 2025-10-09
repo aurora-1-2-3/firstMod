@@ -98,6 +98,14 @@ public class ModItems {
 
 
 
+      public static final DeferredItem<BroadSwordItem> DIAMOND_BROAD_SWORD = ITEMS.register("diamond_broad_sword",
+              () -> new BroadSwordItem(Tiers.DIAMOND, new Item.Properties()
+                      .attributes(BroadSwordItem.createAttributes(Tiers.DIAMOND, 2, -3.4f,4, 5)), 0.50D));
+
+      public static final DeferredItem<SpearItem> DIAMOND_SPEAR = ITEMS.register("diamond_spear",
+              () -> new SpearItem(Tiers.DIAMOND, new Item.Properties()
+                      .attributes(SpearItem.createAttributes(Tiers.DIAMOND, 2, -2.4f, 5))));
+
 
       public static final DeferredItem<ModSwordItem> GALLIUM_SWORD = ITEMS.register("gallium_sword",
               () -> new ModSwordItem(ModToolTiers.GALLIUM, new Item.Properties()

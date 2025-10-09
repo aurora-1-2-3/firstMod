@@ -29,6 +29,8 @@ public class ModItemProvider extends ItemModelProvider {
         basicItem(ModItems.GALLIUM_NUGGET.get());
         basicItem(ModItems.RAW_BOIIUM.get());
         basicItem(ModItems.BOIIUM_ROD.get());
+        basicItem(ModItems.DIAMOND_SPEAR.get());
+        basicItem(ModItems.DIAMOND_BROAD_SWORD.get());
 
 
         buttonItem(ModBlocks.GALLIUM_BUTTON, ModBlocks.GALLIUM_BLOCK);

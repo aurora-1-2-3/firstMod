@@ -4,6 +4,8 @@ import net.aurora.firstmod.blocks.ModBlocks;
 import net.aurora.firstmod.components.ModDataComponents;
 import net.aurora.firstmod.items.ModCreativeModeTab;
 import net.aurora.firstmod.items.ModItems;
+import net.aurora.firstmod.util.ModAttributes;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -37,6 +39,7 @@ public class FirstMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModDataComponents.register(modEventBus);
+        ModAttributes.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -59,5 +62,13 @@ public class FirstMod {
     public void onServerStarting(ServerStartingEvent event) {
 
     }
+
+    public static ResourceLocation ID(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    }
+
+    public static final String PLAYER_ENTITY_INTERACTION_RANGE_MODIFIER_ID = "72551fd8-ec05-4009-ae5f-fdfe492da7e4";
+    public static final String PLAYER_SWEEP_DAMAGE_RATIO_MODIFIER_ID = "3a6aa20c-2f42-4397-b0c0-57aedcc23d24";
+    public static final String PLAYER_SWEEP_HITBOX_MODIFIER_ID = "f6c776c9-ca44-4336-a905-5c84b3625285";
 
 }

@@ -34,6 +34,8 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.GALLIUM_SWORD);
                         output.accept(ModItems.GALLIUM_SHOVEL);
                         output.accept(ModItems.GALLIUM_HOE);
+                        output.accept(ModItems.DIAMOND_SPEAR);
+                        output.accept(ModItems.DIAMOND_BROAD_SWORD);
 
 
                         output.accept(ModBlocks.GALLIUM_BLOCK);
@@ -56,7 +58,7 @@ public class ModCreativeModeTab {
 
     public static final Supplier<CreativeModeTab> BOIIUM_TAB = CREATIVE_MODE_TAB.register("boiium_tab", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ModItems.RAW_BOIIUM.get()))
-            .title(Component.translatable("creativetab.firstmod.boiium"))
+            .title(Component.translatable("creativetab.firstmod.boiium_items"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModItems.RAW_BOIIUM);
                 output.accept(ModBlocks.RAW_BOIIUM_BLOCK);
