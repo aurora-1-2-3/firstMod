@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/crop",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "crop": "firstmod:block/neon_potato_stage2"
+  }
+}

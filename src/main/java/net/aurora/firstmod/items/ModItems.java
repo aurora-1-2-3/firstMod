@@ -98,6 +98,76 @@ public class ModItems {
 
 
 
+
+    public static final DeferredItem<ArmorItem> GALLIUM_HELMET = ITEMS.register("gallium_helmet",
+            () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> GALLIUM_CHESTPLATE = ITEMS.register("gallium_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> GALLIUM_LEGGINGS = ITEMS.register("gallium_leggings",
+            () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> GALLIUM_BOOTS = ITEMS.register("gallium_boots",
+            () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> RAW_BOIIUM_HELMET = ITEMS.register("raw_boiium_helmet",
+            () -> new ArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> RAW_BOIIUM_CHESTPLATE = ITEMS.register("raw_boiium_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> RAW_BOIIUM_LEGGINGS = ITEMS.register("raw_boiium_leggings",
+            () -> new ArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> RAW_BOIIUM_BOOTS = ITEMS.register("raw_boiium_boots",
+            () -> new ArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    public static final DeferredItem<Item> GALLIUM_HORSE_ARMOR = ITEMS.register("gallium_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, new Item.Properties().stacksTo(1)));
+
+
+    public static final DeferredItem<IceWand> ICE_WAND = ITEMS.register("ice_wand",
+            () -> new IceWand(new Item.Properties().stacksTo(1).durability(128)));
+
+    public static final DeferredItem<Item> GALLIUM_WHEAT = ITEMS.register("gallium_wheat", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GALLIUM_WHEAT_SEEDS = ITEMS.register("gallium_wheat_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.GALLIUM_WHEAT_CROP.get(), new Item.Properties()));
+
+    public static final DeferredItem<Item> NEON_POTATO = ITEMS.register("neon_potato",
+            () -> new ItemNameBlockItem(ModBlocks.NEON_POTATO_CROP.get(), new Item.Properties().food(ModFoodProperties.NEON_POTATO)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      public static final DeferredItem<ScytheItem> DIAMOND_SCYTHE = ITEMS.register("diamond_scythe",
+              () -> new ScytheItem(Tiers.DIAMOND, new Item.Properties()
+                      .attributes(ScytheItem.createAttributes(Tiers.DIAMOND, 2, -2.4f,5, 2)), 0.75D));
+
       public static final DeferredItem<BroadSwordItem> DIAMOND_BROAD_SWORD = ITEMS.register("diamond_broad_sword",
               () -> new BroadSwordItem(Tiers.DIAMOND, new Item.Properties()
                       .attributes(BroadSwordItem.createAttributes(Tiers.DIAMOND, 2, -3.4f,4, 5)), 0.50D));

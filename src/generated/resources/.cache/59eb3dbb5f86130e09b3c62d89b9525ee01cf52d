@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-04T06:30:00.729229356	Loot Tables
+// 1.21.1	2025-10-19T10:53:24.547372161	Loot Tables
 fbc990875cf3a735267c72c3b7ca7911b7f1ecfc data/firstmod/loot_table/blocks/deepslate_gallium_ore.json
 a3ab4dc3d0cfdc7ac2daa107eb9a08ba78f016af data/firstmod/loot_table/blocks/gallium_block.json
 408b4efa6bcc9ac12a6d837cdc0197fa62e69778 data/firstmod/loot_table/blocks/gallium_button.json
@@ -12,6 +12,8 @@ bad0c0c23edecc3ddf4c4797b15276181b4fa20b data/firstmod/loot_table/blocks/gallium
 90311c1faa43ae0423a735ca9c58e62306e764d7 data/firstmod/loot_table/blocks/gallium_stairs.json
 09ff4233322047509a1b808baf0dd5ff97389086 data/firstmod/loot_table/blocks/gallium_trap_door.json
 5a5e9bf9be2a76712137ce3edcfc134adaf49d43 data/firstmod/loot_table/blocks/gallium_wall.json
+4eeef0d59d2066f0f72bb04001ec35e203c7b9f9 data/firstmod/loot_table/blocks/gallium_wheat_crop.json
 9e731e305ca4e9ec4fbb01446b5b5c79235ef326 data/firstmod/loot_table/blocks/galvanized_square_steel.json
+2f89463dbf9206e7896e1571fd99afc8b00efe5a data/firstmod/loot_table/blocks/neon_potato_crop.json
 273ff38ec6804c30c93867768a834ac1e6b2244c data/firstmod/loot_table/blocks/raw_boiium_block.json
 8f3858bf8acb359a96c8f753d637e13c44896726 data/firstmod/loot_table/blocks/raw_gallium_block.json

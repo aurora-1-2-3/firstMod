@@ -2,20 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "minecraft:bread"
-    },
     "G": {
-      "item": "firstmod:gallium_ingot"
+      "item": "firstmod:gallium_wheat"
     }
   },
   "pattern": [
-    "GGG",
-    "GBG",
     "GGG"
   ],
   "result": {
-    "count": 8,
+    "count": 3,
     "id": "firstmod:gallium_bread"
   }
 }

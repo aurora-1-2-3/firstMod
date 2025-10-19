@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-31T10:27:49.840782176	Recipes
+// 1.21.1	2025-10-18T21:25:47.219073706	Recipes
 8c6979dbd2ab7e47580ad1c57d09bc2de4068b70 data/firstmod/advancement/recipes/building_blocks/gallium_slab.json
 f1c2b4e31ea55e102e72d49dd1d066ee24bef1ad data/firstmod/advancement/recipes/building_blocks/gallium_stairs.json
 b40382a027f9d394cc947ffe50918a656a522ad0 data/firstmod/advancement/recipes/building_blocks/gallium_wall.json
@@ -6,7 +6,7 @@ b40382a027f9d394cc947ffe50918a656a522ad0 data/firstmod/advancement/recipes/build
 75dc45038d211421c463c9b91cf3929273a5a1f3 data/firstmod/advancement/recipes/misc/cooked_axolotl_egg_from_smoking_axolotl_spawn_egg.json
 0baf547fb5ba97130d4f23c930eed47c6590eca9 data/firstmod/advancement/recipes/misc/gallium_ball.json
 80b79aef8fa656986b98035221fdef44abf39686 data/firstmod/advancement/recipes/misc/gallium_block.json
-6eaa0cad142c9ba9ff6ebd221d34741d3d61c8d9 data/firstmod/advancement/recipes/misc/gallium_bread.json
+741171028223559427d83f43992b7c864b60d0d2 data/firstmod/advancement/recipes/misc/gallium_bread.json
 96887484bd30ae150b42b0c774f2281eddffe657 data/firstmod/advancement/recipes/misc/gallium_ingot.json
 0f322f15ec06cc474a9829768ac74f86e93cf6da data/firstmod/advancement/recipes/misc/gallium_ingot_from_blasting_deepslate_gallium_ore.json
 cd104407fb7eb2a62a828162336434283a679bcb data/firstmod/advancement/recipes/misc/gallium_ingot_from_blasting_gallium_ore.json
@@ -26,7 +26,7 @@ be4d039950c83ab06e8f00284edfed5265b711ac data/firstmod/advancement/recipes/redst
 89e852cdee4c388934d7066a7f69911666da070d data/firstmod/recipe/cooked_axolotl_egg_from_smoking_axolotl_spawn_egg.json
 1f189aed50c4e98f3d41eb607965f2992d8cf919 data/firstmod/recipe/gallium_ball.json
 2b9fa5b489a6fbe8a650579f899de8e63e40ff2c data/firstmod/recipe/gallium_block.json
-330c79795cc4f19b50db8d949f6a2951eb1004ad data/firstmod/recipe/gallium_bread.json
+ba077c546e7bf49404e1bfe3cdcefe76e3a82970 data/firstmod/recipe/gallium_bread.json
 51b246844d73fd236f0e409ba8d64c3a34aeacc2 data/firstmod/recipe/gallium_button.json
 2fabeb9bcaa118850b97dc2717546ad26a37f26e data/firstmod/recipe/gallium_door.json
 741f6442696fd0220c61ecb9e8643610ac30dbaa data/firstmod/recipe/gallium_fence.json

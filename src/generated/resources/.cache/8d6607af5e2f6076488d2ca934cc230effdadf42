@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-04T06:30:00.735936617	Tags for minecraft:item mod id firstmod
+// 1.21.1	2025-10-12T16:07:39.772058559	Tags for minecraft:item mod id firstmod
 e9f3d66fb2c0c813493f63ce2cc1066f65808a48 data/firstmod/tags/item/boiium_items.json
 023556b12a84ac7ca0a60fa6d692f96c25d934c3 data/firstmod/tags/item/transformable_items.json
 3e42b4bcd7a59d85428a4ae4818dc6c9258fdf4c data/minecraft/tags/item/axes.json
@@ -6,3 +6,4 @@ e9f3d66fb2c0c813493f63ce2cc1066f65808a48 data/firstmod/tags/item/boiium_items.js
 225feea8aabf1005895e7640ffce50bc9f9f5d60 data/minecraft/tags/item/pickaxes.json
 50dbe64aa954dbeccd466f162b2d10faec3cd582 data/minecraft/tags/item/shovels.json
 c67514dd211b632f8daa1c5b2dcbaaa278746ce0 data/minecraft/tags/item/swords.json
+fa274ac4dda73c2dfb15b35e96da98e48a93dcd1 data/minecraft/tags/item/trimmable_armor.json
