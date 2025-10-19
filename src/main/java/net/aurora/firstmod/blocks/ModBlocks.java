@@ -70,7 +70,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.ANVIL)));
 
-
+// test
 
     public static final DeferredBlock<StairBlock> GALLIUM_STAIRS = registerBlock("gallium_stairs",
             () -> new StairBlock(ModBlocks.GALLIUM_BLOCK.get().defaultBlockState(), BlockBehaviour
