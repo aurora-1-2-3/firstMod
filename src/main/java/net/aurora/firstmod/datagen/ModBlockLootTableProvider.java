@@ -1,7 +1,10 @@
 package net.aurora.firstmod.datagen;
 
 import net.aurora.firstmod.blocks.ModBlocks;
+import net.aurora.firstmod.blocks.custom.GalliumWheatCropBlock;
+import net.aurora.firstmod.blocks.custom.ModCropBlock;
 import net.aurora.firstmod.items.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -11,10 +14,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.neoforged.fml.common.Mod;
 
@@ -51,13 +57,40 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         add(ModBlocks.GALLIUM_ORE.get(), block -> createOreDrop(ModBlocks.GALLIUM_ORE.get(), ModItems.RAW_GALLIUM.get()));
 
-
         add(ModBlocks.DEEPSLATE_GALLIUM_ORE.get(), block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_GALLIUM_ORE.get(), ModItems.RAW_GALLIUM.get(), 2, 5));
+
+
+        this.add(ModBlocks.GALLIUM_WHEAT_CROP.get(), createAgeBasedCropDrops(ModBlocks.GALLIUM_WHEAT_CROP.get(),
+                ModItems.GALLIUM_WHEAT.get(), ModItems.GALLIUM_WHEAT_SEEDS.get(), ModCropBlock.AGE, 3));
+
+        this.add(ModBlocks.NEON_POTATO_CROP.get(), createAgeBasedCropDrops(ModBlocks.NEON_POTATO_CROP.get(),
+                ModItems.NEON_POTATO.get(), ModItems.NEON_POTATO.get(), ModCropBlock.AGE, 3));
+
+
+
+
+
 
 
 
 
     }
+
+    private LootTable.Builder createAgeBasedCropDrops(Block cropBlock, Item dropItem, Item seedItem, IntegerProperty ageProperty, int maxAge) {
+        LootItemCondition.Builder condition = LootItemBlockStatePropertyCondition.hasBlockStateProperties(cropBlock)
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ageProperty, maxAge));
+
+        return createCropDrops(cropBlock, dropItem, seedItem, condition);
+    }
+
+
+
+
+
+
+
+
+
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
         return this.createSilkTouchDispatchTable(pBlock,

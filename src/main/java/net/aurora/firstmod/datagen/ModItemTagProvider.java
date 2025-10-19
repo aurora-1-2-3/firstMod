@@ -39,6 +39,16 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.AXES).add(ModItems.GALLIUM_AXE.get());
         tag(ItemTags.HOES).add(ModItems.GALLIUM_HOE.get());
 
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.GALLIUM_HELMET.get())
+                .add(ModItems.GALLIUM_CHESTPLATE.get())
+                .add(ModItems.GALLIUM_LEGGINGS.get())
+                .add(ModItems.GALLIUM_BOOTS.get())
+                .add(ModItems.RAW_BOIIUM_HELMET.get())
+                .add(ModItems.RAW_BOIIUM_CHESTPLATE.get())
+                .add(ModItems.RAW_BOIIUM_LEGGINGS.get())
+                .add(ModItems.RAW_BOIIUM_BOOTS.get());
+
 
 
 

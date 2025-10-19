@@ -1,0 +1,13 @@
+{
+  "values": {
+    "firstmod:gallium_wheat": {
+      "chance": 0.25
+    },
+    "firstmod:gallium_wheat_seeds": {
+      "chance": 0.25
+    },
+    "firstmod:neon_potato": {
+      "chance": 0.25
+    }
+  }
+}

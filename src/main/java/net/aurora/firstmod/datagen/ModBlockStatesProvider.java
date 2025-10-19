@@ -3,23 +3,19 @@ package net.aurora.firstmod.datagen;
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.blocks.ModBlocks;
 import net.aurora.firstmod.blocks.custom.GalliumRodBlock;
-import net.minecraft.core.Direction;
+import net.aurora.firstmod.blocks.custom.GalliumWheatCropBlock;
+import net.aurora.firstmod.blocks.custom.ModCropBlock;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.data.models.blockstates.PropertyDispatch;
-import net.minecraft.data.models.blockstates.Variant;
-import net.minecraft.data.models.blockstates.VariantProperties;
-import net.minecraft.data.models.model.ModelLocationUtils;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+
+import java.util.function.Function;
 
 public class ModBlockStatesProvider extends BlockStateProvider {
     public ModBlockStatesProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -52,10 +48,34 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.GALLIUM_FENCE_GATE);
         blockItem(ModBlocks.GALLIUM_TRAP_DOOR, "_bottom");
 
+        makeCrop(((CropBlock) ModBlocks.GALLIUM_WHEAT_CROP.get()), "gallium_wheat_stage", "gallium_wheat_stage");
+        makeCrop(((CropBlock) ModBlocks.NEON_POTATO_CROP.get()), "neon_potato_stage", "neon_potato_stage");
+
 
         galliumRodBlockColorChange();
 
     }
+
+
+
+
+    public void makeCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((ModCropBlock) block).getAgeProperty()),
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, "block/" + textureName + state.getValue(((ModCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+
+
+
 
 
     private void galliumRodBlockColorChange() {

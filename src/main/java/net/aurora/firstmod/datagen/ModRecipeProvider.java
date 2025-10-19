@@ -49,13 +49,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define( 'S', Items.SLIME_BALL)
                 .unlockedBy("has_gallium_ingot", has(ModItems.RAW_GALLIUM)).save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GALLIUM_BREAD.get(), 8)
-                .pattern("GGG")
-                .pattern("GBG")
-                .pattern("GGG")
-                .define('G', ModItems.GALLIUM_INGOT.get())
-                .define( 'B', Items.BREAD)
-                .unlockedBy("has_gallium_ingot", has(ModItems.RAW_GALLIUM)).save(recipeOutput);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GALLIUM_ROD_BLOCK.get())
                 .pattern("GGG")
@@ -78,6 +72,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("G")
                 .define('G', ModItems.GALLIUM_INGOT.get())
                 .unlockedBy("has_gallium_ingot", has(ModItems.GALLIUM_INGOT)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GALLIUM_BREAD.get(), 3)
+                .pattern("GGG")
+                .define('G', ModItems.GALLIUM_WHEAT.get())
+                .unlockedBy("has_gallium_wheat", has(ModItems.GALLIUM_WHEAT_SEEDS)).save(recipeOutput);
 
 
 

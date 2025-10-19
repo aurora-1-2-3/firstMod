@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gallium_ingot": {
+    "has_gallium_wheat": {
       "conditions": {
         "items": [
           {
-            "items": "firstmod:raw_gallium"
+            "items": "firstmod:gallium_wheat_seeds"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_gallium_ingot"
+      "has_gallium_wheat"
     ]
   ],
   "rewards": {
