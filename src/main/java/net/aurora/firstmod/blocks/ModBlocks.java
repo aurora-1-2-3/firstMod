@@ -51,7 +51,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> NEON_POTATO_CROP = BLOCKS.register("neon_potato_crop",
             () -> new NeonPotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES), ModItems.NEON_POTATO));
 
-
+    // test
 
     public static final DeferredBlock<Block> GALLIUM_ORE = registerBlock("gallium_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 5), BlockBehaviour
