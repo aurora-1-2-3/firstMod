@@ -2,9 +2,7 @@ package net.aurora.firstmod.blocks;
 
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.blocks.custom.GalliumRodBlock;
-import net.aurora.firstmod.blocks.custom.GalliumWheatCropBlock;
 import net.aurora.firstmod.blocks.custom.GalvanizedSquareSteel;
-import net.aurora.firstmod.blocks.custom.NeonPotatoCropBlock;
 import net.aurora.firstmod.items.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -13,8 +11,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -45,13 +41,6 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GALLIUM_WHEAT_CROP = BLOCKS.register("gallium_wheat_crop",
-            () -> new GalliumWheatCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), ModItems.GALLIUM_WHEAT_SEEDS));
-
-    public static final DeferredBlock<Block> NEON_POTATO_CROP = BLOCKS.register("neon_potato_crop",
-            () -> new NeonPotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES), ModItems.NEON_POTATO));
-
-    // test
 
     public static final DeferredBlock<Block> GALLIUM_ORE = registerBlock("gallium_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 5), BlockBehaviour
