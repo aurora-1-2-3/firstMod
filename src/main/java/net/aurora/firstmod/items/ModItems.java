@@ -106,7 +106,7 @@ public class ModItems {
     public static final DeferredItem<ArmorItem> GALLIUM_CHESTPLATE = ITEMS.register("gallium_chestplate",
             () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
-
+//test
     public static final DeferredItem<ArmorItem> GALLIUM_LEGGINGS = ITEMS.register("gallium_leggings",
             () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
@@ -140,28 +140,12 @@ public class ModItems {
             () -> new IceWand(new Item.Properties().stacksTo(1).durability(128)));
 
     public static final DeferredItem<Item> GALLIUM_WHEAT = ITEMS.register("gallium_wheat", () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> GALLIUM_WHEAT_SEEDS = ITEMS.register("gallium_wheat_seeds",
             () -> new ItemNameBlockItem(ModBlocks.GALLIUM_WHEAT_CROP.get(), new Item.Properties()));
 
     public static final DeferredItem<Item> NEON_POTATO = ITEMS.register("neon_potato",
             () -> new ItemNameBlockItem(ModBlocks.NEON_POTATO_CROP.get(), new Item.Properties().food(ModFoodProperties.NEON_POTATO)));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       public static final DeferredItem<ScytheItem> DIAMOND_SCYTHE = ITEMS.register("diamond_scythe",
