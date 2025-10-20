@@ -2,7 +2,9 @@ package net.aurora.firstmod.blocks;
 
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.blocks.custom.GalliumRodBlock;
+import net.aurora.firstmod.blocks.custom.GalliumWheatCropBlock;
 import net.aurora.firstmod.blocks.custom.GalvanizedSquareSteel;
+import net.aurora.firstmod.blocks.custom.NeonPotatoCropBlock;
 import net.aurora.firstmod.items.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -129,7 +131,10 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .noOcclusion()));
 
-
+    public static final DeferredBlock<Block> GALLIUM_WHEAT_CROP = BLOCKS.register("gallium_wheat_crop",
+            () -> new GalliumWheatCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), ModItems.GALLIUM_WHEAT_SEEDS));
+    public static final DeferredBlock<Block> NEON_POTATO_CROP = BLOCKS.register("neon_potato_crop",
+            () -> new NeonPotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES), ModItems.NEON_POTATO));
 
 
 
