@@ -25,7 +25,7 @@ import java.util.Map;
 public class ModItems {
       public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FirstMod.MODID);
 
-
+    //
       public static final DeferredItem<Item> GALLIUM_INGOT = ITEMS.register("gallium_ingot", () -> new Item(new Item.Properties()));
       public static final DeferredItem<Item> RAW_BOIIUM = ITEMS.register("raw_boiium", () -> new Item(new Item.Properties()));
       public static final DeferredItem<Item> BOIIUM_ROD = ITEMS.register("boiium_rod", () -> new Item(new Item.Properties().durability(32)){
