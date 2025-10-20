@@ -27,6 +27,7 @@ public class ModItems {
 
 
       public static final DeferredItem<Item> GALLIUM_INGOT = ITEMS.register("gallium_ingot", () -> new Item(new Item.Properties()));
+      public static final DeferredItem<Item> TEST = ITEMS.register("gallium_ingot", () -> new Item(new Item.Properties()));
       public static final DeferredItem<Item> RAW_BOIIUM = ITEMS.register("raw_boiium", () -> new Item(new Item.Properties()));
       public static final DeferredItem<Item> BOIIUM_ROD = ITEMS.register("boiium_rod", () -> new Item(new Item.Properties().durability(32)){
           public static final Map<Block, Block> BOIIUM_ROD_LIST =
