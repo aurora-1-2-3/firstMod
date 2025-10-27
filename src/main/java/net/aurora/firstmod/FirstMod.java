@@ -2,8 +2,10 @@ package net.aurora.firstmod;
 
 import net.aurora.firstmod.blocks.ModBlocks;
 import net.aurora.firstmod.components.ModDataComponents;
+import net.aurora.firstmod.effect.ModEffects;
 import net.aurora.firstmod.items.ModCreativeModeTab;
 import net.aurora.firstmod.items.ModItems;
+import net.aurora.firstmod.items.ModPotions;
 import net.aurora.firstmod.util.ModAttributes;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
@@ -38,6 +40,8 @@ public class FirstMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModPotions.register(modEventBus);
+        ModEffects.register(modEventBus);
         ModDataComponents.register(modEventBus);
         ModAttributes.register(modEventBus);
         // Register the item to a creative tab
