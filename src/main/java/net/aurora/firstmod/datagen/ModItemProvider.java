@@ -22,7 +22,7 @@ import java.util.LinkedHashMap;
 
 public class ModItemProvider extends ItemModelProvider {
     public ModItemProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, FirstMod.MODID, existingFileHelper);
+        super(output, FirstMod.MOD_ID, existingFileHelper);
     }
 
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
@@ -92,7 +92,7 @@ public class ModItemProvider extends ItemModelProvider {
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
-        final String MOD_ID = FirstMod.MODID; // Change this to your mod id
+        final String MOD_ID = FirstMod.MOD_ID; // Change this to your mod id
 
         if(itemDeferredItem.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
@@ -149,26 +149,26 @@ public class ModItemProvider extends ItemModelProvider {
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  ResourceLocation.fromNamespaceAndPath(FirstMod.MODID,
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID,
                         "block/" + baseBlock.getId().getPath()));
     }
 
     public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  ResourceLocation.fromNamespaceAndPath(FirstMod.MODID,
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID,
                         "block/" + baseBlock.getId().getPath()));
     }
 
     public void wallItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  ResourceLocation.fromNamespaceAndPath(FirstMod.MODID,
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID,
                         "block/" + baseBlock.getId().getPath()));
     }
 
     private ItemModelBuilder handheldItem(DeferredItem<?> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(FirstMod.MODID,"item/" + item.getId().getPath()));
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 
 

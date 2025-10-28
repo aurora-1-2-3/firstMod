@@ -20,7 +20,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FirstMod.MODID);
+    public static final DeferredRegister.Blocks REGISTRY = DeferredRegister.createBlocks(FirstMod.MOD_ID);
 
     public static final DeferredBlock<Block> GALLIUM_BLOCK = registerBlock("gallium_block",
             () -> new Block(BlockBehaviour
@@ -131,9 +131,9 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .noOcclusion()));
 
-    public static final DeferredBlock<Block> GALLIUM_WHEAT_CROP = BLOCKS.register("gallium_wheat_crop",
+    public static final DeferredBlock<Block> GALLIUM_WHEAT_CROP = REGISTRY.register("gallium_wheat_crop",
             () -> new GalliumWheatCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), ModItems.GALLIUM_WHEAT_SEEDS));
-    public static final DeferredBlock<Block> NEON_POTATO_CROP = BLOCKS.register("neon_potato_crop",
+    public static final DeferredBlock<Block> NEON_POTATO_CROP = REGISTRY.register("neon_potato_crop",
             () -> new NeonPotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES), ModItems.NEON_POTATO));
 
 
@@ -151,17 +151,17 @@ public class ModBlocks {
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
-        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        DeferredBlock<T> toReturn = REGISTRY.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        ModItems.REGISTRY.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
 
     public static void register(IEventBus eventBus){
-        BLOCKS.register(eventBus);
+        REGISTRY.register(eventBus);
     }
 }

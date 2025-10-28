@@ -5,17 +5,15 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.Vec3;
 
-public class StumpedEffect extends MobEffect{
-    protected StumpedEffect(MobEffectCategory category, int color) {
+public class StumpedMobEffect extends MobEffect{
+    protected StumpedMobEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
 
     @Override
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
+        livingEntity.fallDistance = 0.0F;
         Vec3 velocity = livingEntity.getDeltaMovement();
-        if (velocity.y < 0) {
-            livingEntity.fallDistance = 0.0F;
-        }
         if (!livingEntity.onGround() && velocity.y > 0) {
             livingEntity.setDeltaMovement(velocity.x, velocity.y * 0.5, velocity.z);
         }

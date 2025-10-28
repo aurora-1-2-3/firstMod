@@ -10,11 +10,14 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModPotions {
-    public static final DeferredRegister<Potion> POTION =
-            DeferredRegister.create(BuiltInRegistries.POTION, FirstMod.MODID);
+    public static final DeferredRegister<Potion> REGISTRY =
+            DeferredRegister.create(BuiltInRegistries.POTION, FirstMod.MOD_ID);
 
-    public static final Holder<Potion> STUMPED_POTION = POTION.register("stumped_potion",
+    public static final Holder<Potion> STUMPED_POTION = REGISTRY.register("stumped_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.STUMPED_EFFECT, 1200, 0)));
+
+    public static final Holder<Potion> TIDE_POTION = REGISTRY.register("tide_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.TIDE_EFFECT, 1200, 0)));
 
 
 
@@ -26,7 +29,7 @@ public class ModPotions {
 
 
     public static void register(IEventBus eventBus){
-        POTION.register(eventBus);
+        REGISTRY.register(eventBus);
     }
 
 }

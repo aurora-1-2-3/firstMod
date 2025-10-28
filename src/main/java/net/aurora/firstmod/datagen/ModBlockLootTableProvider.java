@@ -1,7 +1,6 @@
 package net.aurora.firstmod.datagen;
 
 import net.aurora.firstmod.blocks.ModBlocks;
-import net.aurora.firstmod.blocks.custom.GalliumWheatCropBlock;
 import net.aurora.firstmod.blocks.custom.ModCropBlock;
 import net.aurora.firstmod.items.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -22,7 +21,6 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.neoforged.fml.common.Mod;
 
 import java.util.Set;
 
@@ -102,6 +100,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+        return ModBlocks.REGISTRY.getEntries().stream().map(Holder::value)::iterator;
     }
 }

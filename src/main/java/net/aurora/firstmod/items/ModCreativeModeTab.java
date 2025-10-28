@@ -12,12 +12,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class ModCreativeModeTab {
-  public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FirstMod.MODID);
+  public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FirstMod.MOD_ID);
 
 
 
   // java should fuck itself
-    public static final Supplier<CreativeModeTab> GALLIUM_TAB = CREATIVE_MODE_TAB.register("gallium_tab",
+    public static final Supplier<CreativeModeTab> GALLIUM_TAB = REGISTRY.register("gallium_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.GALLIUM_INGOT.get()))
                     .title(Component.translatable("creativetab.firstmod.gallium_items"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -70,7 +70,7 @@ public class ModCreativeModeTab {
                     }).build());
 
 
-    public static final Supplier<CreativeModeTab> BOIIUM_TAB = CREATIVE_MODE_TAB.register("boiium_tab", () -> CreativeModeTab.builder()
+    public static final Supplier<CreativeModeTab> BOIIUM_TAB = REGISTRY.register("boiium_tab", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ModItems.RAW_BOIIUM.get()))
             .title(Component.translatable("creativetab.firstmod.boiium_items"))
             .displayItems((itemDisplayParameters, output) -> {
@@ -84,7 +84,7 @@ public class ModCreativeModeTab {
 
 
   public static void register(IEventBus eventBus) {
-     CREATIVE_MODE_TAB.register(eventBus);
+     REGISTRY.register(eventBus);
   }
 
 }

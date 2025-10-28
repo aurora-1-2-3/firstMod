@@ -12,8 +12,8 @@ import java.util.function.UnaryOperator;
 
 @SuppressWarnings("removal")
 public class ModDataComponents {
-    public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENTS =
-            DeferredRegister.createDataComponents(FirstMod.MODID);
+    public static final DeferredRegister<DataComponentType<?>> REGISTRY =
+            DeferredRegister.createDataComponents(FirstMod.MOD_ID);
 
 
 
@@ -25,14 +25,14 @@ public class ModDataComponents {
     private static <T>DeferredHolder<DataComponentType<?>, DataComponentType<T>> register(String name,
         UnaryOperator<DataComponentType.Builder<T>> builderOperator){
 
-        return DATA_COMPONENTS.register(name, () -> builderOperator.apply(DataComponentType.builder()).build());
+        return REGISTRY.register(name, () -> builderOperator.apply(DataComponentType.builder()).build());
     }
 
 
 
 
     public static void register(IEventBus eventBus){
-        DATA_COMPONENTS.register(eventBus);
+        REGISTRY.register(eventBus);
     }
 
 }

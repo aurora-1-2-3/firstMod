@@ -3,7 +3,6 @@ package net.aurora.firstmod.datagen;
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.blocks.ModBlocks;
 import net.aurora.firstmod.blocks.custom.GalliumRodBlock;
-import net.aurora.firstmod.blocks.custom.GalliumWheatCropBlock;
 import net.aurora.firstmod.blocks.custom.ModCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -19,7 +18,7 @@ import java.util.function.Function;
 
 public class ModBlockStatesProvider extends BlockStateProvider {
     public ModBlockStatesProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, FirstMod.MODID, exFileHelper);
+        super(output, FirstMod.MOD_ID, exFileHelper);
     }
 
     @Override
@@ -68,7 +67,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
     private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((ModCropBlock) block).getAgeProperty()),
-                ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, "block/" + textureName + state.getValue(((ModCropBlock) block).getAgeProperty()))).renderType("cutout"));
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + textureName + state.getValue(((ModCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }
@@ -82,15 +81,15 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         getVariantBuilder(ModBlocks.GALLIUM_ROD_BLOCK.get()).forAllStates(state -> {
             if(state.getValue(GalliumRodBlock.TOUCHED)) {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("gallium_rod_block_blue",
-                        ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, "block/" + "gallium_rod_block_blue")))};
+                        ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + "gallium_rod_block_blue")))};
             } else {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("gallium_rod_block_red",
-                        ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, "block/" + "gallium_rod_block_red")))};
+                        ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + "gallium_rod_block_red")))};
             }
         });
 
         simpleBlockItem(ModBlocks.GALLIUM_ROD_BLOCK.get(), models().cubeAll("gallium_rod_block_red",
-                ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, "block/" + "gallium_rod_block_red")));
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + "gallium_rod_block_red")));
     }
 
 

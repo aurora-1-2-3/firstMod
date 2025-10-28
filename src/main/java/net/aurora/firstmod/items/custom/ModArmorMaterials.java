@@ -53,7 +53,7 @@ public class ModArmorMaterials {
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, float toughness, float knockbackResistance,
                                                   Supplier<Item> ingredientItem) {
-        ResourceLocation location = ResourceLocation.fromNamespaceAndPath(FirstMod.MODID, name);
+        ResourceLocation location = ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, name);
         Holder<SoundEvent> equipSound = SoundEvents.ARMOR_EQUIP_NETHERITE;
         Supplier<Ingredient> ingredient = () -> Ingredient.of(ingredientItem.get());
         List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(location));

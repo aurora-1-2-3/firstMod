@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @SuppressWarnings("removal")
-@EventBusSubscriber(modid = FirstMod.MODID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = FirstMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvents {
 
 
@@ -43,5 +43,7 @@ public class ModEvents {
         for (Item log : logItems) {
             builder.addMix(Potions.AWKWARD, log, ModPotions.STUMPED_POTION);
         }
+
+        builder.addMix(Potions.AWKWARD, Items.PRISMARINE_SHARD, ModPotions.TIDE_POTION);
     }
 }

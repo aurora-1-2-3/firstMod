@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @SuppressWarnings("removal")
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = FirstMod.MODID)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = FirstMod.MOD_ID)
 public class DataGenerators {
 
     @SubscribeEvent
