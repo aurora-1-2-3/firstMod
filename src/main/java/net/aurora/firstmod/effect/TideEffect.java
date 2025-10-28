@@ -1,8 +1,11 @@
 package net.aurora.firstmod.effect;
 
+import net.aurora.firstmod.FirstMod;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+
 
 
 public class TideEffect extends MobEffect {
@@ -13,15 +16,13 @@ public class TideEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-
-
         return true;
     }
+
 
     @Override
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
         return true;
     }
-
-
 }
+
