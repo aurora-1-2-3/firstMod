@@ -28,11 +28,4 @@ public class ModDataComponents {
         return REGISTRY.register(name, () -> builderOperator.apply(DataComponentType.builder()).build());
     }
 
-
-
-
-    public static void register(IEventBus eventBus){
-        REGISTRY.register(eventBus);
-    }
-
 }

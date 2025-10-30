@@ -132,20 +132,17 @@ public class ModBlocks {
                     .noOcclusion()));
 
     public static final DeferredBlock<Block> GALLIUM_WHEAT_CROP = REGISTRY.register("gallium_wheat_crop",
-            () -> new GalliumWheatCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), ModItems.GALLIUM_WHEAT_SEEDS));
+            () -> new GalliumWheatCropBlock(BlockBehaviour
+                    .Properties
+                    .ofFullCopy(Blocks.WHEAT),
+                    ModItems.GALLIUM_WHEAT_SEEDS));
+
+
     public static final DeferredBlock<Block> NEON_POTATO_CROP = REGISTRY.register("neon_potato_crop",
-            () -> new NeonPotatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES), ModItems.NEON_POTATO));
-
-
-
-
-
-
-
-
-
-
-
+            () -> new NeonPotatoCropBlock(BlockBehaviour
+                    .Properties
+                    .ofFullCopy(Blocks.POTATOES),
+                    ModItems.NEON_POTATO));
 
 
 
@@ -160,8 +157,4 @@ public class ModBlocks {
         ModItems.REGISTRY.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
-
-    public static void register(IEventBus eventBus){
-        REGISTRY.register(eventBus);
-    }
 }

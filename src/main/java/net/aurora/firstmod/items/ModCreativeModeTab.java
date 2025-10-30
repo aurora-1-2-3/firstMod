@@ -83,8 +83,4 @@ public class ModCreativeModeTab {
             .build());
 
 
-  public static void register(IEventBus eventBus) {
-     REGISTRY.register(eventBus);
-  }
-
 }

@@ -3,7 +3,7 @@ package net.aurora.firstmod;
 import com.mojang.logging.LogUtils;
 import net.aurora.firstmod.blocks.ModBlocks;
 import net.aurora.firstmod.components.ModDataComponents;
-import net.aurora.firstmod.effect.ModEffects;
+import net.aurora.firstmod.effect.ModMobEffects;
 import net.aurora.firstmod.items.ModCreativeModeTab;
 import net.aurora.firstmod.items.ModItems;
 import net.aurora.firstmod.items.ModPotions;
@@ -20,7 +20,6 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
 import java.util.List;
-import java.util.UUID;
 
 @Mod(FirstMod.MOD_ID)
 public class FirstMod {
@@ -31,7 +30,7 @@ public class FirstMod {
             ModBlocks.REGISTRY,
             ModItems.REGISTRY,
             ModPotions.REGISTRY,
-            ModEffects.REGISTRY,
+            ModMobEffects.REGISTRY,
             ModDataComponents.REGISTRY,
             ModAttributes.REGISTRY,
             ModCreativeModeTab.REGISTRY

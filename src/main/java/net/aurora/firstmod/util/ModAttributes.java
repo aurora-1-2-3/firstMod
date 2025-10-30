@@ -18,16 +18,4 @@ public class ModAttributes{
     public static final DeferredHolder<Attribute, Attribute> SWEEP_HITBOX = REGISTRY.register("player.sweep_hitbox_sweep",
             () -> new RangedAttribute("attributes.firstmod.sweep_hitbox", 0.25D, 0.0D, 10.0D).setSyncable(true));
 
-
-
-
-
-
-
-
-
-    public static void register(IEventBus eventBus){
-        REGISTRY.register(eventBus);
-
-    }
 }

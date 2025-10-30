@@ -3,15 +3,12 @@ package net.aurora.firstmod.effect;
 import net.aurora.firstmod.FirstMod;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class ModEffects {
+public class ModMobEffects {
     public static final DeferredRegister<MobEffect> REGISTRY =
             DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, FirstMod.MOD_ID);
 
@@ -22,10 +19,4 @@ public class ModEffects {
     public static final Holder<MobEffect> TIDE_EFFECT = REGISTRY.register("tide",
             () -> new TideEffect(MobEffectCategory.BENEFICIAL, 0x00BFA5));
 
-
-
-
-    public static void register(IEventBus eventBus){
-        REGISTRY.register(eventBus);
-    }
 }
