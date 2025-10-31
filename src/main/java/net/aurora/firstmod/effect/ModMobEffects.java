@@ -5,7 +5,6 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModMobEffects {
@@ -18,5 +17,8 @@ public class ModMobEffects {
 
     public static final Holder<MobEffect> TIDE_EFFECT = REGISTRY.register("tide",
             () -> new TideEffect(MobEffectCategory.BENEFICIAL, 0x00BFA5));
+
+    public static final Holder<MobEffect> BULWARK_EFFECT = REGISTRY.register("bulwark",
+            () -> new BulwarkMobEffect(MobEffectCategory.BENEFICIAL, 0x22253D));
 
 }
