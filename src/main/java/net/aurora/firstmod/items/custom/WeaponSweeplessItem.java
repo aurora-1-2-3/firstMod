@@ -10,6 +10,8 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
+import static net.aurora.firstmod.ConstantsAndHelperMethods.ID;
+import static net.aurora.firstmod.ConstantsAndHelperMethods.PLAYER_ENTITY_INTERACTION_RANGE_MODIFIER_ID;
 import static net.aurora.firstmod.FirstMod.*;
 
 public class WeaponSweeplessItem extends TieredItem {

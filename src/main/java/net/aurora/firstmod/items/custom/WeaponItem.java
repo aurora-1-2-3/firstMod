@@ -14,6 +14,7 @@ import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.phys.AABB;
 
+import static net.aurora.firstmod.ConstantsAndHelperMethods.*;
 import static net.aurora.firstmod.FirstMod.*;
 
 public class WeaponItem extends SwordItem {
