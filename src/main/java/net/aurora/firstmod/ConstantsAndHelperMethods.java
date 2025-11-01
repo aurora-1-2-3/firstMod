@@ -1,6 +1,9 @@
 package net.aurora.firstmod;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.Projectile;
 
 import static net.aurora.firstmod.FirstMod.MOD_ID;
 
@@ -19,5 +22,14 @@ public class ConstantsAndHelperMethods {
     // HELPER METHODS
     public static ResourceLocation ID(String path) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    }
+
+    public static boolean isProjectileDamage(DamageSource damageSource) {
+        return damageSource.getDirectEntity() instanceof Projectile;
+    }
+
+    public static void noDamageTilt(LivingEntity entity) {
+        entity.hurtTime = 0;
+        entity.hurtDuration = 0;
     }
 }

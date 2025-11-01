@@ -1,7 +1,5 @@
 package net.aurora.firstmod.effect;
 
-import net.aurora.firstmod.FirstMod;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;

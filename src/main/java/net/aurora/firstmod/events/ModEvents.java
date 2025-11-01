@@ -17,11 +17,6 @@ import java.util.List;
 @SuppressWarnings("removal")
 @EventBusSubscriber(modid = FirstMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvents {
-
-
-
-
-
     @SubscribeEvent
     public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event) {
         PotionBrewing.Builder builder = event.getBuilder();
@@ -48,4 +43,5 @@ public class ModEvents {
         builder.addMix(Potions.AWKWARD, Items.HEART_OF_THE_SEA, ModPotions.GRACE_POTION);
         builder.addMix(Potions.AWKWARD, Items.FLINT, ModPotions.BULWARK_POTION);
     }
+
 }

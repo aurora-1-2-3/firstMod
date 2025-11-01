@@ -5,8 +5,8 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.Vec3;
 
-public class StumpedMobEffect extends MobEffect{
-    protected StumpedMobEffect(MobEffectCategory category, int color) {
+public class StumpedEffect extends MobEffect{
+    protected StumpedEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
 

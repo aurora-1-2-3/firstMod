@@ -7,18 +7,18 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class ModMobEffects {
+public class ModEffects {
     public static final DeferredRegister<MobEffect> REGISTRY =
             DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, FirstMod.MOD_ID);
 
 
     public static final Holder<MobEffect> STUMPED_EFFECT = REGISTRY.register("stumped",
-    () -> new StumpedMobEffect(MobEffectCategory.NEUTRAL, 0x8B4513));
+    () -> new StumpedEffect(MobEffectCategory.NEUTRAL, 0x8B4513));
 
     public static final Holder<MobEffect> TIDE_EFFECT = REGISTRY.register("tide",
             () -> new TideEffect(MobEffectCategory.BENEFICIAL, 0x00BFA5));
 
     public static final Holder<MobEffect> BULWARK_EFFECT = REGISTRY.register("bulwark",
-            () -> new BulwarkMobEffect(MobEffectCategory.BENEFICIAL, 0x22253D));
+            () -> new BulwarkEffect(MobEffectCategory.BENEFICIAL, 0x22253D));
 
 }

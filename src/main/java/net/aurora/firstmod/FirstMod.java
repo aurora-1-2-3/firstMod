@@ -3,12 +3,11 @@ package net.aurora.firstmod;
 import com.mojang.logging.LogUtils;
 import net.aurora.firstmod.blocks.ModBlocks;
 import net.aurora.firstmod.components.ModDataComponents;
-import net.aurora.firstmod.effect.ModMobEffects;
+import net.aurora.firstmod.effect.ModEffects;
 import net.aurora.firstmod.items.ModCreativeModeTab;
 import net.aurora.firstmod.items.ModItems;
 import net.aurora.firstmod.items.ModPotions;
 import net.aurora.firstmod.util.ModAttributes;
-import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import net.neoforged.bus.api.IEventBus;
@@ -30,7 +29,7 @@ public class FirstMod {
             ModBlocks.REGISTRY,
             ModItems.REGISTRY,
             ModPotions.REGISTRY,
-            ModMobEffects.REGISTRY,
+            ModEffects.REGISTRY,
             ModDataComponents.REGISTRY,
             ModAttributes.REGISTRY,
             ModCreativeModeTab.REGISTRY
