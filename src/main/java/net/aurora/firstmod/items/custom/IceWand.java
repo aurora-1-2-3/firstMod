@@ -46,20 +46,12 @@ public class IceWand extends Item {
         if(ICE_WAND_LIST.containsKey(clickedBlock)) {
             if(!level.isClientSide()) {
                 level.setBlockAndUpdate(context.getClickedPos(), ICE_WAND_LIST.get(clickedBlock).defaultBlockState());
-
-
                 context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level),  context.getPlayer(),
                         item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                 level.playSound(null, context.getClickedPos(), SoundEvents.ANVIL_USE, SoundSource.BLOCKS);
-
-
-
                 context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
-
             }
-
-
         }
         return InteractionResult.SUCCESS;
     }
@@ -69,10 +61,7 @@ public class IceWand extends Item {
         if(!player.level().isClientSide){
             interactionTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 3));
             player.level().playSound(null, interactionTarget.blockPosition(), SoundEvents.SNOW_HIT, SoundSource.PLAYERS, 1.0F, 1.0F);
-
         }
-
-
         return InteractionResult.SUCCESS;
     }
 }

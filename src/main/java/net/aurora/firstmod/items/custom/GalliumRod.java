@@ -44,26 +44,12 @@ public class GalliumRod extends Item {
         if(GALLIUM_ROD_LIST.containsKey(clickedBlock)) {
             if(!level.isClientSide()) {
                 level.setBlockAndUpdate(context.getClickedPos(), GALLIUM_ROD_LIST.get(clickedBlock).defaultBlockState());
-
-
-                context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level),  context.getPlayer(),
+                context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), context.getPlayer(),
                         item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
-
                 level.playSound(null, context.getClickedPos(), SoundEvents.ANVIL_USE, SoundSource.BLOCKS);
-
-
-
                 context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
-
             }
-
-
         }
-
         return InteractionResult.SUCCESS;
-
-
-
-
     }
 }
