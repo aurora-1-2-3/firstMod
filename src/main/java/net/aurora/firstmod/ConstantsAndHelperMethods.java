@@ -15,10 +15,6 @@ public class ConstantsAndHelperMethods {
     public static final String PLAYER_SWEEP_HITBOX_MODIFIER_ID = "f6c776c9-ca44-4336-a905-5c84b3625285";
 
 
-
-
-
-
     // HELPER METHODS
     public static ResourceLocation ID(String path) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);

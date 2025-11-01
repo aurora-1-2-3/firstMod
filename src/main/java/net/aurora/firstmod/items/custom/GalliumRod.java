@@ -29,8 +29,6 @@ public class GalliumRod extends Item {
                     Blocks.GOLD_BLOCK, ModBlocks.GALLIUM_BLOCK.get(),
                     ModBlocks.GALLIUM_BLOCK.get(), ModBlocks.GALVANIZED_SQUARE_STEEL.get()
 
-
-
             );
 
 
