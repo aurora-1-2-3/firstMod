@@ -4,8 +4,6 @@ package net.aurora.firstmod.events;
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.items.ModPotions;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;

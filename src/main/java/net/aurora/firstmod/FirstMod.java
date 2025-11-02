@@ -44,15 +44,8 @@ public class FirstMod {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-
-
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
     }
-
-
-
-
-
 }

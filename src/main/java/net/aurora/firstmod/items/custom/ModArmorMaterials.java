@@ -40,16 +40,6 @@ public class ModArmorMaterials {
 
 
 
-
-
-
-
-
-
-
-
-
-
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, float toughness, float knockbackResistance,
                                                   Supplier<Item> ingredientItem) {
