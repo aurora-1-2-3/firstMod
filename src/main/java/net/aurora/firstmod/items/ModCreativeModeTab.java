@@ -19,7 +19,7 @@ public class ModCreativeModeTab {
   // java should fuck itself
     public static final Supplier<CreativeModeTab> GALLIUM_TAB = REGISTRY.register("gallium_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.GALLIUM_INGOT.get()))
-                    .title(Component.translatable("creativetab.firstmod.gallium_items"))
+                    .title(Component.translatable("creative_tab.firstmod.gallium_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.GALLIUM_INGOT);
                         output.accept(ModItems.RAW_GALLIUM);
@@ -41,10 +41,6 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.GALLIUM_CHESTPLATE);
                         output.accept(ModItems.GALLIUM_LEGGINGS);
                         output.accept(ModItems.GALLIUM_BOOTS);
-                        output.accept(ModItems.RAW_BOIIUM_HELMET);
-                        output.accept(ModItems.RAW_BOIIUM_CHESTPLATE);
-                        output.accept(ModItems.RAW_BOIIUM_LEGGINGS);
-                        output.accept(ModItems.RAW_BOIIUM_BOOTS);
                         output.accept(ModItems.GALLIUM_HORSE_ARMOR);
                         output.accept(ModItems.ICE_WAND);
                         output.accept(ModItems.GALLIUM_WHEAT);
@@ -72,11 +68,15 @@ public class ModCreativeModeTab {
 
     public static final Supplier<CreativeModeTab> BOIIUM_TAB = REGISTRY.register("boiium_tab", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(ModItems.RAW_BOIIUM.get()))
-            .title(Component.translatable("creativetab.firstmod.boiium_items"))
+            .title(Component.translatable("creative_tab.firstmod.boiium_items"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModItems.RAW_BOIIUM);
                 output.accept(ModBlocks.RAW_BOIIUM_BLOCK);
                 output.accept(ModItems.BOIIUM_ROD);
+                output.accept(ModItems.RAW_BOIIUM_HELMET);
+                output.accept(ModItems.RAW_BOIIUM_CHESTPLATE);
+                output.accept(ModItems.RAW_BOIIUM_LEGGINGS);
+                output.accept(ModItems.RAW_BOIIUM_BOOTS);
             })
 
 

@@ -40,9 +40,6 @@ public class ModItems {
                           Blocks.IRON_BLOCK, Blocks.AIR,
                           Blocks.GOLD_BLOCK, Blocks.AIR,
                           ModBlocks.GALLIUM_BLOCK.get(), Blocks.AIR
-
-
-
                   );
 
           @Override
@@ -134,7 +131,7 @@ public class ModItems {
 
 
     public static final DeferredItem<IceWand> ICE_WAND = REGISTRY.register("ice_wand",
-            () -> new IceWand(new Item.Properties().stacksTo(1).durability(128)));
+            () -> new IceWand(new Item.Properties().stacksTo(1).durability(128).fireResistant()));
 
     public static final DeferredItem<Item> GALLIUM_WHEAT = REGISTRY.register("gallium_wheat", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> GALLIUM_WHEAT_SEEDS = REGISTRY.register("gallium_wheat_seeds",
