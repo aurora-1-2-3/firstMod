@@ -21,4 +21,7 @@ public class ModEffects {
     public static final Holder<MobEffect> BULWARK_EFFECT = REGISTRY.register("bulwark",
             () -> new BulwarkEffect(MobEffectCategory.BENEFICIAL, 0x22253D));
 
+    public static final Holder<MobEffect> BERSERKER_EFFECT = REGISTRY.register("berserker",
+            () -> new BerserkerEffect(MobEffectCategory.BENEFICIAL, 0xFF4444));
+
 }

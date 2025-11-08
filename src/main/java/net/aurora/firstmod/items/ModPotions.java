@@ -4,6 +4,7 @@ import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.effect.ModEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.alchemy.Potion;
@@ -24,5 +25,8 @@ public class ModPotions {
 
     public static final Holder<Potion> BULWARK_POTION = REGISTRY.register("bulwark_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.BULWARK_EFFECT, 1200, 0)));
+
+    public static final Holder<Potion> BERSERKER_POTION = REGISTRY.register("berserker_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.BERSERKER_EFFECT, 1200, 0)));
 
 }
