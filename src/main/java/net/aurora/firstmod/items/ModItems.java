@@ -3,6 +3,7 @@ package net.aurora.firstmod.items;
 import net.aurora.firstmod.FirstMod;
 import net.aurora.firstmod.blocks.ModBlocks;
 import net.aurora.firstmod.components.ModDataComponents;
+import net.aurora.firstmod.items.custom.ModArmorItem;
 import net.aurora.firstmod.items.custom.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -48,17 +49,12 @@ public class ModItems {
               Block clickedBlock = level.getBlockState(context.getClickedPos()).getBlock();
 
               if(BOIIUM_ROD_LIST.containsKey(clickedBlock)) {
-                  if(!level.isClientSide()) {
+                  if(!level.isClientSide() && context.getPlayer() != null) {
                       level.setBlockAndUpdate(context.getClickedPos(), BOIIUM_ROD_LIST.get(clickedBlock).defaultBlockState());
-
-
                       context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level),  context.getPlayer(),
                               item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                       level.playSound(null, context.getClickedPos(), SoundEvents.ANVIL_USE, SoundSource.BLOCKS);
-
-
-
                       context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
 
                   }
@@ -94,35 +90,35 @@ public class ModItems {
 
 
     public static final DeferredItem<ArmorItem> GALLIUM_HELMET = REGISTRY.register("gallium_helmet",
-            () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> GALLIUM_CHESTPLATE = REGISTRY.register("gallium_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> GALLIUM_LEGGINGS = REGISTRY.register("gallium_leggings",
-            () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            () -> new ModArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> GALLIUM_BOOTS = REGISTRY.register("gallium_boots",
-            () -> new ArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            () -> new ModArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> RAW_BOIIUM_HELMET = REGISTRY.register("raw_boiium_helmet",
-            () -> new ArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> RAW_BOIIUM_CHESTPLATE = REGISTRY.register("raw_boiium_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> RAW_BOIIUM_LEGGINGS = REGISTRY.register("raw_boiium_leggings",
-            () -> new ArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            () -> new ModArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> RAW_BOIIUM_BOOTS = REGISTRY.register("raw_boiium_boots",
-            () -> new ArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            () -> new ModArmorItem(ModArmorMaterials.RAW_BOIIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
 
     public static final DeferredItem<Item> GALLIUM_HORSE_ARMOR = REGISTRY.register("gallium_horse_armor",
@@ -173,5 +169,11 @@ public class ModItems {
       public static final DeferredItem<HoeItem> GALLIUM_HOE = REGISTRY.register("gallium_hoe",
               () -> new HoeItem(ModToolTiers.GALLIUM, new Item.Properties()
                       .attributes(HoeItem.createAttributes(ModToolTiers.GALLIUM, 1.0f, -2.0f))));
+
+
+
+      public static final DeferredItem<DoubleEdgedSword> DIAMOND_DOUBLE_EDGED_SWORD = REGISTRY.register("diamond_double_edged_sword",
+              () -> new DoubleEdgedSword(Tiers.DIAMOND, new Item.Properties()
+                      .attributes(DoubleEdgedSword.createAttributes(Tiers.DIAMOND, 2,-2.4f))));
 
 }

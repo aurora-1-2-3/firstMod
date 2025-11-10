@@ -51,9 +51,9 @@ public class ModEvents {
 
 
     @SubscribeEvent
-    public static void livingDamage(LivingDamageEvent.Pre event) {
-        if (event.getEntity() instanceof EnderMan enderman
-                && event.getSource().getDirectEntity() instanceof Player player) {
+    public static void livingDamage(LivingDamageEvent.Pre livingDamageEvent) {
+        if (livingDamageEvent.getEntity() instanceof EnderMan enderman
+                && livingDamageEvent.getSource().getDirectEntity() instanceof Player player) {
             if (player.getOffhandItem().getItem() == Items.COOKED_CHICKEN) {
                 Component message = Component.translatable("message.firstmod.racist_warning", player.getName(), player.getMainHandItem().getHoverName());
                 player.sendSystemMessage(message);

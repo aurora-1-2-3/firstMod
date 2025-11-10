@@ -63,6 +63,7 @@ public class ModItemProvider extends ItemModelProvider {
         basicItem(ModItems.GALLIUM_WHEAT.get());
         basicItem(ModItems.GALLIUM_WHEAT_SEEDS.get());
         basicItem(ModItems.NEON_POTATO.get());
+        basicItem(ModItems.DIAMOND_DOUBLE_EDGED_SWORD.get());
         trimmedArmorItem(ModItems.GALLIUM_HELMET);
         trimmedArmorItem(ModItems.GALLIUM_CHESTPLATE);
         trimmedArmorItem(ModItems.GALLIUM_LEGGINGS);

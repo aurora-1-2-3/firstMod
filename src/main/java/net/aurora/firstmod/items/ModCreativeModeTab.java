@@ -41,11 +41,16 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.GALLIUM_CHESTPLATE);
                         output.accept(ModItems.GALLIUM_LEGGINGS);
                         output.accept(ModItems.GALLIUM_BOOTS);
+                        output.accept(ModItems.RAW_BOIIUM_HELMET);
+                        output.accept(ModItems.RAW_BOIIUM_CHESTPLATE);
+                        output.accept(ModItems.RAW_BOIIUM_LEGGINGS);
+                        output.accept(ModItems.RAW_BOIIUM_BOOTS);
                         output.accept(ModItems.GALLIUM_HORSE_ARMOR);
                         output.accept(ModItems.ICE_WAND);
                         output.accept(ModItems.GALLIUM_WHEAT);
                         output.accept(ModItems.GALLIUM_WHEAT_SEEDS);
                         output.accept(ModItems.NEON_POTATO);
+                        output.accept(ModItems.DIAMOND_DOUBLE_EDGED_SWORD);
 
 
                         output.accept(ModBlocks.GALLIUM_BLOCK);
