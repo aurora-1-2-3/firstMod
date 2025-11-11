@@ -6,6 +6,7 @@ import net.aurora.firstmod.components.ModDataComponents;
 import net.aurora.firstmod.items.custom.ModArmorItem;
 import net.aurora.firstmod.items.custom.*;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -81,12 +82,8 @@ public class ModItems {
                   if (stack.get(ModDataComponents.COORDINATES) != null){
                         tooltipComponents.add(Component.literal("Last Block Galvanized: " + stack.get(ModDataComponents.COORDINATES)));
                   }
-
                   super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
-            }
-
-
-      });
+            }});
 
 
     public static final DeferredItem<ArmorItem> GALLIUM_HELMET = REGISTRY.register("gallium_helmet",
@@ -125,7 +122,6 @@ public class ModItems {
             () -> new AnimalArmorItem(ModArmorMaterials.GALLIUM_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
                     false, new Item.Properties().stacksTo(1)));
 
-
     public static final DeferredItem<IceWand> ICE_WAND = REGISTRY.register("ice_wand",
             () -> new IceWand(new Item.Properties().stacksTo(1).durability(128).fireResistant()));
 
@@ -135,7 +131,6 @@ public class ModItems {
 
     public static final DeferredItem<Item> NEON_POTATO = REGISTRY.register("neon_potato",
             () -> new ItemNameBlockItem(ModBlocks.NEON_POTATO_CROP.get(), new Item.Properties().food(ModFoodProperties.NEON_POTATO)));
-
 
       public static final DeferredItem<ScytheItem> DIAMOND_SCYTHE = REGISTRY.register("diamond_scythe",
               () -> new ScytheItem(Tiers.DIAMOND, new Item.Properties()
@@ -148,7 +143,6 @@ public class ModItems {
       public static final DeferredItem<SpearItem> DIAMOND_SPEAR = REGISTRY.register("diamond_spear",
               () -> new SpearItem(Tiers.DIAMOND, new Item.Properties()
                       .attributes(SpearItem.createAttributes(Tiers.DIAMOND, 2, -2.4f, 5))));
-
 
       public static final DeferredItem<ModSwordItem> GALLIUM_SWORD = REGISTRY.register("gallium_sword",
               () -> new ModSwordItem(ModToolTiers.GALLIUM, new Item.Properties()
@@ -170,10 +164,12 @@ public class ModItems {
               () -> new HoeItem(ModToolTiers.GALLIUM, new Item.Properties()
                       .attributes(HoeItem.createAttributes(ModToolTiers.GALLIUM, 1.0f, -2.0f))));
 
+      public static final DeferredItem<DoubleEdgedSwordItem> DIAMOND_DOUBLE_EDGED_SWORD = REGISTRY.register("diamond_double_edged_sword",
+              () -> new DoubleEdgedSwordItem(Tiers.DIAMOND, new Item.Properties()
+                      .attributes(DoubleEdgedSwordItem.createAttributes(Tiers.DIAMOND, 2,-2.4f))));
 
 
-      public static final DeferredItem<DoubleEdgedSword> DIAMOND_DOUBLE_EDGED_SWORD = REGISTRY.register("diamond_double_edged_sword",
-              () -> new DoubleEdgedSword(Tiers.DIAMOND, new Item.Properties()
-                      .attributes(DoubleEdgedSword.createAttributes(Tiers.DIAMOND, 2,-2.4f))));
+    public static final DeferredItem<Item> BIRTH_SMITHING_TEMPLATE = REGISTRY.register("birth_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "birth")));
 
 }

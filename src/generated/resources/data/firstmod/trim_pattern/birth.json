@@ -1,0 +1,8 @@
+{
+  "asset_id": "firstmod:birth",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.firstmod.birth"
+  },
+  "template_item": "firstmod:birth_armor_trim_smithing_template"
+}

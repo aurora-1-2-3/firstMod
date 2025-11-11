@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "firstmod:item/diamond_double_edged_sword"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 2, -1],
+      "scale": [1, 1, 1]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 2, -1],
+      "scale": [1, 1, 1]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 0, 0],
+      "translation": [1.13, 3.2, 1.13],
+      "scale": [1, 1, 1]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 0, 0],
+      "translation": [1.13, 3.2, 1.13],
+      "scale": [1, 1, 1]
+    }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1,
+        "use_duration": 0.95
+      },
+      "model": "firstmod:item/diamond_double_edged_sword_spinning_1"
+    }
+  ]
+}

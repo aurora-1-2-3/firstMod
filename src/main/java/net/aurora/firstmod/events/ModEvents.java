@@ -2,11 +2,13 @@ package net.aurora.firstmod.events;
 
 
 import net.aurora.firstmod.FirstMod;
+import net.aurora.firstmod.components.ModDataComponents;
 import net.aurora.firstmod.items.ModPotions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
@@ -14,6 +16,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 
 import java.util.List;
 
@@ -59,6 +62,17 @@ public class ModEvents {
                 player.sendSystemMessage(message);
                 player.getMainHandItem().grow(1);
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onLivingDeath(LivingDeathEvent livingDeathEvent) {
+        if (livingDeathEvent.getSource().getEntity() instanceof Player player) {
+            ItemStack stack = player.getMainHandItem();
+            if (stack.isEmpty()) return;
+
+            Integer current = stack.getOrDefault(ModDataComponents.KILL_COUNT.get(), 0);
+            stack.set(ModDataComponents.KILL_COUNT.get(), current + 1);
         }
     }
 }

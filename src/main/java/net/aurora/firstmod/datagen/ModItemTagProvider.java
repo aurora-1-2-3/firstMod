@@ -49,7 +49,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.RAW_BOIIUM_LEGGINGS.get())
                 .add(ModItems.RAW_BOIIUM_BOOTS.get());
 
+        this.tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.GALLIUM_INGOT.get());
 
+        this.tag(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.BIRTH_SMITHING_TEMPLATE.get());
 
 
 

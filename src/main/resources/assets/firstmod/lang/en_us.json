@@ -44,6 +44,7 @@
   "item.firstmod.raw_boiium_leggings": "Raw Boiium Leggings",
   "item.firstmod.raw_boiium_chestplate": "Raw Boiium Chestplate",
   "item.firstmod.cooked_axolotl_egg": "Cooked Axolotl Egg",
+  "item.firstmod.diamond_double_edged_sword": "Diamond Double Edged Sword",
 
 
   "block.firstmod.gallium_ore": "Gallium Ore",
@@ -62,6 +63,8 @@
   "block.firstmod.deepslate_gallium_ore": "Deepslate Gallium Ore",
   "block.firstmod.gallium_rod_block": "Block of Gallium Rod",
   "block.firstmod.galvanized_square_steel": "Galvanized Square Steel",
+
+  "tooltip.firstmod.kill_count": "§cKills: %s",
 
 
   "creative_tab.firstmod.gallium_items": "Gallium Tab",

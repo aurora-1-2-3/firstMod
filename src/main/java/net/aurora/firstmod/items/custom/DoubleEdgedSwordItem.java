@@ -15,12 +15,12 @@ import net.minecraft.world.phys.AABB;
 
 import java.util.List;
 
-public class DoubleEdgedSword extends SwordItem {
+public class DoubleEdgedSwordItem extends SwordItem {
 
     private static final double SPIN_RADIUS = 1.5;
     private static final int MAX_USE_DURATION = 72000;
 
-    public DoubleEdgedSword(Tier tier, Properties properties) {
+    public DoubleEdgedSwordItem(Tier tier, Properties properties) {
         super(tier, properties);
     }
 
@@ -37,16 +37,14 @@ public class DoubleEdgedSword extends SwordItem {
 
     @Override
     public void onUseTick(Level level, LivingEntity livingEntity, ItemStack itemStack, int remainingUseTicks) {
-        if (!(livingEntity instanceof Player player)) return;
+        if (livingEntity instanceof Player player && !level.isClientSide) {
+            if (!player.isCrouching()) {
+                player.stopUsingItem();
+                return;
+            }
 
-        if (!player.isCrouching()) {
-            player.stopUsingItem();
-            return;
-        }
-        int ticksUsed = getUseDuration(itemStack, livingEntity) - remainingUseTicks;
-
-        if (ticksUsed % 5 == 0 && !level.isClientSide) {
-            damageNearbyEntities(level, player, itemStack);
+            int ticksUsed = getUseDuration(itemStack, livingEntity) - remainingUseTicks;
+            if (ticksUsed % 5 == 0) damageNearbyEntities(level, player, itemStack);
         }
     }
 
@@ -58,7 +56,7 @@ public class DoubleEdgedSword extends SwordItem {
         List<LivingEntity> nearbyEntities = level.getEntitiesOfClass(
                 LivingEntity.class,
                 searchBox,
-                target -> target != player && target.distanceTo(player) <= SPIN_RADIUS
+                livingEntity -> livingEntity != player && livingEntity.distanceTo(player) <= SPIN_RADIUS
         );
 
         for (LivingEntity nearbyEntity : nearbyEntities) {

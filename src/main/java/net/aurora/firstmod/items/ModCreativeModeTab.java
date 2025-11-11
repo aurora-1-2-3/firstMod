@@ -51,6 +51,7 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.GALLIUM_WHEAT_SEEDS);
                         output.accept(ModItems.NEON_POTATO);
                         output.accept(ModItems.DIAMOND_DOUBLE_EDGED_SWORD);
+                        output.accept(ModItems.BIRTH_SMITHING_TEMPLATE);
 
 
                         output.accept(ModBlocks.GALLIUM_BLOCK);

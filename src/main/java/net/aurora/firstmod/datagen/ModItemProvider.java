@@ -25,7 +25,7 @@ public class ModItemProvider extends ItemModelProvider {
         super(output, FirstMod.MOD_ID, existingFileHelper);
     }
 
-    private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+    private static final LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
     static {
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
         trimMaterials.put(TrimMaterials.IRON, 0.2F);
@@ -38,10 +38,6 @@ public class ModItemProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
-
-
-
-
 
     @Override
     protected void registerModels() {
@@ -63,7 +59,7 @@ public class ModItemProvider extends ItemModelProvider {
         basicItem(ModItems.GALLIUM_WHEAT.get());
         basicItem(ModItems.GALLIUM_WHEAT_SEEDS.get());
         basicItem(ModItems.NEON_POTATO.get());
-        basicItem(ModItems.DIAMOND_DOUBLE_EDGED_SWORD.get());
+        basicItem(ModItems.BIRTH_SMITHING_TEMPLATE.get());
         trimmedArmorItem(ModItems.GALLIUM_HELMET);
         trimmedArmorItem(ModItems.GALLIUM_CHESTPLATE);
         trimmedArmorItem(ModItems.GALLIUM_LEGGINGS);

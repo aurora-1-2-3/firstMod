@@ -1,8 +1,9 @@
-// 1.21.1	2025-10-18T21:25:47.219073706	Recipes
+// 1.21.1	2025-11-11T18:39:00.867096759	Recipes
 8c6979dbd2ab7e47580ad1c57d09bc2de4068b70 data/firstmod/advancement/recipes/building_blocks/gallium_slab.json
 f1c2b4e31ea55e102e72d49dd1d066ee24bef1ad data/firstmod/advancement/recipes/building_blocks/gallium_stairs.json
 b40382a027f9d394cc947ffe50918a656a522ad0 data/firstmod/advancement/recipes/building_blocks/gallium_wall.json
 22076679798a74125a70cebe4a3b0bf7ad25d137 data/firstmod/advancement/recipes/decorations/gallium_fence.json
+eeacb97d23a13f21da87201078584b2c3394a10a data/firstmod/advancement/recipes/misc/birth.json
 75dc45038d211421c463c9b91cf3929273a5a1f3 data/firstmod/advancement/recipes/misc/cooked_axolotl_egg_from_smoking_axolotl_spawn_egg.json
 0baf547fb5ba97130d4f23c930eed47c6590eca9 data/firstmod/advancement/recipes/misc/gallium_ball.json
 80b79aef8fa656986b98035221fdef44abf39686 data/firstmod/advancement/recipes/misc/gallium_block.json
@@ -23,6 +24,7 @@ e2f87f8d0a3938bc5ce43f77df33f74d34331603 data/firstmod/advancement/recipes/misc/
 4839cad850174b2aa1ffaba070c9fea037e69e13 data/firstmod/advancement/recipes/redstone/gallium_fence_gate.json
 eb3117b46d8684af8a52fe17fbc3abaf38831a5a data/firstmod/advancement/recipes/redstone/gallium_pressure_plate.json
 be4d039950c83ab06e8f00284edfed5265b711ac data/firstmod/advancement/recipes/redstone/gallium_trap_door.json
+f625746d000e2e93de881de9759f64cc21f8bb6a data/firstmod/recipe/birth.json
 89e852cdee4c388934d7066a7f69911666da070d data/firstmod/recipe/cooked_axolotl_egg_from_smoking_axolotl_spawn_egg.json
 1f189aed50c4e98f3d41eb607965f2992d8cf919 data/firstmod/recipe/gallium_ball.json
 2b9fa5b489a6fbe8a650579f899de8e63e40ff2c data/firstmod/recipe/gallium_block.json

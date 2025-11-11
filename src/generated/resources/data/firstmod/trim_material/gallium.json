@@ -1,0 +1,9 @@
+{
+  "asset_name": "gallium",
+  "description": {
+    "color": "#8018D2",
+    "translate": "trim_material.firstmod.gallium"
+  },
+  "ingredient": "firstmod:gallium_ingot",
+  "item_model_index": 0.5
+}
